@@ -1,19 +1,45 @@
 {
-  "name": "idigital-components",
+  "name": "@fiea-al/idigital-components",
+  "license": "MIT",
   "version": "0.1.0",
   "description": "Biblioteca de componentes do IDigital",
-  "files": ["dist"],
+  "homepage": "https://github.com/FIEA-AL/idigital-components#README.md",
   "main": "dist/idigital-components.umd.js",
   "module": "dist/idigital-components.es.js",
   "types": "dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "IDigital",
+    "Components",
+    "StyleLibrary"
+  ],
+  "author": {
+    "name": "Isaque Lemos",
+    "email": "isaquelemos_bds@hotmail.com.br",
+    "url": "https://github.com/IsaqueLemos"
+  },
+  "contributors": [
+    {
+      "name": "Matheus Melo",
+      "email": "matheusroberttjmelo@gmail.com",
+      "url": "https://github.com/MatheusRmelo"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FIEA-AL/idigital-components.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build && npm run build:types",
     "build:types": "vue-tsc --project tsconfig.build-types.json --declaration --emitDeclarationOnly --outDir dist/types ",
     "typecheck": "vue-tsc --project tsconfig.build-types.json --noEmit"
   },
-  "author": "DIGEST",
-  "license": "ISC",
   "devDependencies": {
     "@babel/types": "^7.20.7",
     "@types/node": "^18.11.18",
