@@ -11,7 +11,7 @@ export default defineConfig({
     outDir: './dist',
     lib: {
       // Ponto de entrada (contém os componentes exportados).
-      entry: resolve(__dirname, 'components/index.ts'),
+      entry: resolve(__dirname, 'src/index.ts'),
       // Nome da biblioteca.
       name: 'idigital-components',
       fileName: (format) => `${'idigital-components'}.${format}.js`,
