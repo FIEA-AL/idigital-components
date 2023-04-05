@@ -1,0 +1,26 @@
+.add-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: auto;
+    height: 40px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--accent-color);
+
+    color: var(--button-text-color);
+}
+
+.add-button:hover{
+    opacity: 0.6;
+}
+.add-button > i {
+    font-size: 20px;
+    margin-right: 8px;
+}
+.add-button > span {
+    font-size: 16px;
+    font-weight: 500;
+}
