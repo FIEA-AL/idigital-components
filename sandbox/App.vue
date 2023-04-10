@@ -1,14 +1,14 @@
 <template>
   <main>
     <h1>Ambiente de Testes</h1>
-    <Button
+    <ICButton
                         id="save-form-password"
                         text="Mudar senha"
                         :max-width="true"
                         :submit="true"
                     />  
                     <br>
-                    <AddButton text="teste" link="teste" />
+                    <ICAddButton text="teste" link="teste" />
                     <br>
 
                     <dButton 
@@ -21,16 +21,15 @@
 </template>
 
 <script >
-import Button from "../src/components/ICButton/Button.vue";
-import AddButton from "../src/components/ICAddbutton/AddButton.vue";
-import dButton from "../src/components/ICDbutton/Dbutton.vue";
+import ICButton from "../src/components/ICButton/ICButton.vue";
+import ICAddButton from "../src/components/ICAddbutton/ICAddButton.vue";
 
 export default{
   name:'App',
   components:{
-    Button,
-    AddButton,
-    dButton
+    ICButton,
+    ICAddButton,
+    
   }
 }
 </script>

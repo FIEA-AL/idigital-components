@@ -1,7 +1,7 @@
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-    name: "AddButton",
+    name: "ICAddButton",
     props: {
         text: {
             type: String,

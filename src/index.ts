@@ -1,7 +1,6 @@
 // Arquivo de exportação dos componentes;
 
-import ButtonVue from "./components/ICButton/Button.vue";
-import Addbutton from "./components/ICAddbutton/Addbutton.vue";
-import Dbutton from "./components/ICDbutton/Dbutton.vue";
+import ICButtonVue from "./components/ICButton/ICButton.vue";
+import ICAddbutton from "./components/ICAddbutton/ICAddButton.vue";
 
-export {ButtonVue,Addbutton,Dbutton};
+export {ICButtonVue,ICAddbutton};

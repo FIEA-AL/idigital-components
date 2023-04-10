@@ -4,6 +4,6 @@
         <span>{{text}}</span>
     </button>
 </template>
-<script lang="ts" src="./AddButton.ts"></script>
-<style scoped lang="css" src="./AddButton.css"></style>
+<script lang="ts" src="./ICAddButton.ts"></script>
+<style scoped lang="css" src="./ICAddButton.css"></style>
 

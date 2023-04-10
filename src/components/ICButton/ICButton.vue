@@ -7,5 +7,5 @@
     </button>
 </template>
 
-<script lang="ts" src="./Button.ts"></script>
-<style scoped lang="css" src="./Button.css"></style>
+<script lang="ts" src="./ICButton.ts"></script>
+<style scoped lang="css" src="./ICButton.css"></style>
