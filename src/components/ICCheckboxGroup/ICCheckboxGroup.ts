@@ -1,5 +1,5 @@
 import { defineComponent } from 'vue';
-import IDCButton from '../buttons/IDCButton.vue';
+import ICButton from '../ICButton/ICButton.vue';
 
 export default defineComponent({
     name: "CheckboxGroup",
@@ -18,5 +18,5 @@ export default defineComponent({
             default: false
         }
     },
-    components: { IDCButton }
+    components: { ICButton }
 });

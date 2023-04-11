@@ -9,5 +9,6 @@ import ICInput from "./components/ICInput/ICInput.vue";
 import ICSelect from "./components/ICSelect/ICSelect.vue";
 import ICSortFilter from "./components/ICSortFilter/ICSortFilter.vue";
 import ICDrawerFilter from "./components/ICDrawerFilter/ICDrawerFilter.vue";
+import ICCheckboxGroup from "./components/ICCheckboxGroup/ICCheckboxGroup.vue";
 
-export {ICButton,ICAddbutton,ICCheckbox,ICInputImage,ICTextarea,ICInput,ICSelect,ICSortFilter,ICDrawerFilter};
+export {ICButton,ICAddbutton,ICCheckbox,ICInputImage,ICTextarea,ICInput,ICSelect,ICSortFilter,ICDrawerFilter,ICCheckboxGroup};
