@@ -1,27 +1,55 @@
 <template>
-    <fieldset :class="error ? 'invalid' : ''">
-        <label :for="id" :class="isFocused ? 'is-focused' : ''">{{ labelText }}</label>
-        <div class="input-with-suffix" v-if="type == 'password'">
-            <input
-                :id="id" :type="showPassword ? 'text' : 'password'"
-                :value="modelValue"
-                @input="$emit('update:modelValue', ($event.target as HTMLInputElement).value)"
-                :placeholder="placeholder"
-                @focus="isFocused = true" @blur="isFocused = false" />
-            <div class="suffix" @click="showPassword = !showPassword">
-                <i class="isax" :class="showPassword ? 'isax-eye' : 'isax-eye-slash'"></i>
-            </div>
-        </div>
-        <input
-            v-else
-            :id="id" :type="type" :placeholder="placeholder"
-            :value="modelValue"
-            @input="$emit('update:modelValue', ($event.target as HTMLInputElement).value)"
-            @focus="isFocused = true" @blur="isFocused = false"
-        />
-        <span class="error-text" v-if="error">{{ error.message }}</span>
-    </fieldset>
-</template>
+    <label class="inpContainer" :for="id">
+      <span class="inpError" v-if="error && invalid">{{ error }}</span>
+      <input
+        :id="id"
+        :name="id"
+        :type="type"
+        :value="modelValue"
+        :invalid="invalid"
+        :disabled="disabled"
+        :readonly="readonly"
+        :placeholder="placeholder"
+        :error="error"
+        v-bind="$attrs"
+        @input="$emit('update:modelValue', $event.target.value)"
+      />
 
-<script lang="ts" src="./ICInput.ts"></script>
+      <div class="txtContainer">
+        <span class="inpLabel">{{ text }}</span>
+        <span class="inpInfo" v-if="info">{{ info }}</span>
+      </div>
+    </label>
+  </template>
+
+
 <style scoped lang="css" src="./ICInput.css"></style>
+
+<script>
+export default {
+  inheritAttrs: false,
+};
+</script>
+
+<script setup>
+import { useAttrs } from "vue";
+const $attrs = useAttrs();
+defineProps({
+  modelValue: null,
+  text: String,
+  info: String,
+  error: String,
+  placeholder: String,
+  invalid: Boolean,
+  disabled: Boolean,
+  readonly: Boolean,
+  type: {
+    type: String,
+    default: "text",
+  },
+  id: {
+    type: String,
+    required: true,
+  },
+});
+</script>

@@ -22,5 +22,32 @@
     </label>
   </template>
 
-<script lang="ts" src="./ICTextarea.ts"></script>
+<script>
+  export default {
+    inheritAttrs: false,
+  };
+</script>
+
+<script setup>
+import { useAttrs } from "vue";
+const $attrs = useAttrs();
+defineProps({
+  modelValue: null,
+  text: String,
+  info: String,
+  error: String,
+  placeholder: String,
+  invalid: Boolean,
+  disabled: Boolean,
+  readonly: Boolean,
+  type: {
+    type: String,
+    default: "text",
+  },
+  id: {
+    type: String,
+    required: true,
+  },
+});
+</script>
 <style scoped lang="css" src="./ICTextarea.css"></style>
