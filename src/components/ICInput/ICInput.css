@@ -1,0 +1,105 @@
+.error-text{
+    font-size: 12px;
+    font-weight: 400;
+
+    text-align: right;
+    color: var(--color-input-invalid);
+}
+/* FIELDSET */
+fieldset {
+    outline: none;
+    border: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+/* LABEL */
+fieldset > label {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+fieldset.invalid label {
+    color: var(--color-input-invalid);
+}
+fieldset > label.is-focused{
+    color: var(--color-text-accent);
+}
+
+/* INPUT */
+fieldset > .input-with-suffix {
+    display: flex;
+    align-items: center;
+}
+fieldset > .input-with-suffix > input {
+    flex: 1;
+    outline: none;
+    border: none;
+
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--color-input);
+    background-color: var(--color-background);
+}
+fieldset > .input-with-suffix > .suffix {
+    cursor: pointer;
+}
+fieldset > .input-with-suffix > .suffix:hover{
+    opacity: 0.6;
+}
+fieldset > input, fieldset > .input-with-suffix {
+    outline: none;
+    appearance: none;
+
+    width: 100%;
+    padding: 12px;
+
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 12px;
+    border-color: var(--color-input-border);
+
+    font-size: 16px;
+    font-weight: 500;
+
+    color: var(--color-input);
+    background-color: var(--color-background);
+}
+fieldset > .input-with-suffix {
+    padding: 0px 12px;
+}
+.input-with-suffix > input{
+    padding: 12px 0px;
+}
+
+fieldset > input::placeholder, fieldset > .input-with-suffix > input::placeholder {
+    font-size: 14px;
+    color: var(--color-input-placeholder);
+}
+
+fieldset > input:hover, fieldset > .input-with-suffix:hover {
+    box-shadow: 0px 4px 4px var(--color-input-shadow);
+    border-color: var(--color-input-hover-border);
+}
+
+fieldset > input:focus, fieldset > .input-with-suffix:focus-within {
+    border-color: var(--color-input-focus-border);
+}
+
+fieldset.invalid > input, fieldset.invalid > .input-with-suffix{
+    border-color: var(--color-input-invalid-border);
+}
+
+fieldset > input:disabled,
+fieldset > input:read-only {
+    color: var(--color-input-disabled);
+    border-color: transparent;
+    background-color: var(--color-input-disabled-background);
+}
+
+fieldset > input:disabled + .txtContainer > .inpLabel,
+fieldset > input:read-only + .txtContainer > .inpLabel {
+    color: var(--color-input-disabled);
+}

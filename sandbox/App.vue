@@ -11,25 +11,30 @@
                     <ICAddButton text="teste" link="teste" />
                     <br>
 
-                    <dButton 
-      id="btnSave"
-                    text="Salvar"
-                    type="submit"
-      />
-    </main>
+    <ICCheckbox label-text="CheckBox"></ICCheckbox>
+    <ICInputImage label="InputImage" placeholder="Faça o upload do ícone do serviço"
+                        :picture="picture" @change="(value)=>picture = value"></ICInputImage>
+                        <ICInput label-text="testeinput" id='1'></ICInput>
+  </main>
 
 </template>
 
 <script >
+
 import ICButton from "../src/components/ICButton/ICButton.vue";
 import ICAddButton from "../src/components/ICAddbutton/ICAddButton.vue";
+import ICCheckbox from "../src/components/ICCheckbox/ICCheckbox.vue";
+import ICInputImage from "../src/components/ICInputImage/ICInputImage.vue";
+// import ICInput from "../src/components/ICInput/ICInput.vue"
 
 export default{
   name:'App',
   components:{
     ICButton,
     ICAddButton,
-    
+    ICCheckbox,
+    ICInputImage,
+    // ICInput
   }
 }
 </script>
