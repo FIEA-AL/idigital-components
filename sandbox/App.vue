@@ -24,6 +24,11 @@
                     info="Verifique com seu gestor antes do preenchimento"
                     :options="options"
                         ></ICSelect>
+
+                        <ICDrawerFilter :is-open=false @change="(value)=>showFilter = value"></ICDrawerFilter>
+                        <!-- <ICSortFilter name="Mais recente" @clicked="handleSortServices"/> -->
+
+
   </main>
 
 </template>
@@ -37,6 +42,8 @@ import ICInputImage from "../src/components/ICInputImage/ICInputImage.vue";
 import ICTextarea from  "../src/components/ICTextarea/ICTextarea.vue";
 import ICInput from "../src/components/ICInput/ICInput.vue"
 import ICSelect from "../src/components/ICSelect/ICSelect.vue"
+import ICSortFilter from "../src/components/ICSortFilter/ICSortFilter.vue"
+import ICDrawerFilter from "../src/components/ICDrawerFilter/ICDrawerFilter.vue"
 
 export default{
   name:'App',
@@ -47,7 +54,9 @@ export default{
     ICInputImage,
     ICInput,
     ICTextarea,
-    ICSelect
+    ICSelect,
+    ICSortFilter,
+    ICDrawerFilter
     }
     
 }
