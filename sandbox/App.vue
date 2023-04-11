@@ -16,7 +16,7 @@
                         :picture="picture" @change="(value)=>picture = value"></ICInputImage>
                         <ICInput placeholder="Digite seu nome" id='1'></ICInput> -->
 
-                        <ICTextarea></ICTextarea>
+                        <!-- <ICTextarea></ICTextarea>
                         <ICSelect
                         id="reference"
                     text="Referência"
@@ -33,10 +33,26 @@
                     <br>
                     <ICAddButton text="teste" link="teste" />
                     <br>
-                        <ICDrawerFilter :is-open=false @change="(value)=>showFilter = value"></ICDrawerFilter>
+                        <ICDrawerFilter :is-open=false @change="(value)=>showFilter = value"></ICDrawerFilter> -->
                         <!-- <ICSortFilter name="Mais recente" @clicked="handleSortServices"/> -->
 
- <ICCheckboxGroup title="teste" :with-shortcut="true" :all-selected="true"></ICCheckboxGroup> 
+ <!-- <ICCheckboxGroup title="teste" :with-shortcut="true" :all-selected="true"></ICCheckboxGroup>  -->
+
+ <ICSectionTitle title="wake up brigth side situation"></ICSectionTitle>
+
+ <!-- <ICConfirmDelete :show=true></ICConfirmDelete> -->
+ <ICDivider ></ICDivider>
+ <div class="tags">
+  <ICPagination
+                :items-per-page="10"
+                :total-items="0"
+                :total-pages="20"
+                :item-active="5"
+                @clicked-page=""
+            />
+ <ICTag  label="ticket.module"  :dark-text="true" status="successLight"></ICTag>
+</div>
+
   </main>
 
 </template>
@@ -53,6 +69,14 @@ import ICSelect from "../src/components/ICSelect/ICSelect.vue"
 import ICSortFilter from "../src/components/ICSortFilter/ICSortFilter.vue"
 import ICDrawerFilter from "../src/components/ICDrawerFilter/ICDrawerFilter.vue"
 import ICCheckboxGroup from "../src/components/ICCheckboxGroup/ICCheckboxGroup.vue"
+import ICSectionTitle from "../src/components/ICSectionTitle/ICSectionTitle.vue"
+import ICConfirmDelete from "../src/components/ICConfirmDelete/ICConfirmDelete.vue"
+import ICDivider from "../src/components/ICDivider/ICDivider.vue"
+import ICTag from "../src/components/ICTag/ICTag.vue"
+import  ICPagination from "../src/components/ICPagination/ICPagination.vue"
+// import  from "../src/components//.vue"
+// import  from "../src/components//.vue"
+// import  from "../src/components//.vue"
 
 
 export default{
@@ -67,7 +91,11 @@ export default{
     ICSelect,
     ICSortFilter,
     ICDrawerFilter,
-    ICCheckboxGroup
+    ICCheckboxGroup,
+    ICSectionTitle,
+    ICConfirmDelete,
+    ICDivider,
+    ICPagination
     }
     
 }
