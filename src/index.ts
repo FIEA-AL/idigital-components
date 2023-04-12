@@ -10,5 +10,28 @@ import ICSelect from "./components/ICSelect/ICSelect.vue";
 import ICSortFilter from "./components/ICSortFilter/ICSortFilter.vue";
 import ICDrawerFilter from "./components/ICDrawerFilter/ICDrawerFilter.vue";
 import ICCheckboxGroup from "./components/ICCheckboxGroup/ICCheckboxGroup.vue";
+import ICSectionTitle from "./components/ICSectionTitle/ICSectionTitle.vue";
+import ICConfirmDelete from "./components/ICConfirmDelete/ICConfirmDelete.vue";
+import ICDivider from "./components/ICDivider/ICDivider.vue";
+import ICPagination from "./components/ICPagination/ICPagination.vue";
+import ICSpinner from "./components/ICSpinner/ICSpinner.vue";
+import ICContainer from "./components/ICContainer/ICContainer.vue";
 
-export {ICButton,ICAddbutton,ICCheckbox,ICInputImage,ICTextarea,ICInput,ICSelect,ICSortFilter,ICDrawerFilter,ICCheckboxGroup};
+export {
+  ICButton,
+  ICAddbutton,
+  ICCheckbox,
+  ICInputImage,
+  ICTextarea,
+  ICInput,
+  ICSelect,
+  ICSortFilter,
+  ICDrawerFilter,
+  ICCheckboxGroup,
+  ICSectionTitle,
+  ICConfirmDelete,
+  ICDivider,
+  ICPagination,
+  ICSpinner,
+  ICContainer,
+};

@@ -1,0 +1,24 @@
+.section-title{
+    display: flex;
+    align-items: center;
+}
+.section-title .title{
+    position: relative;
+    font-size: 24px;
+    font-weight: 500;
+}
+.section-title .title::before{
+    content: '';
+    height: 2px;
+    width: 50px;
+    background: var(--accent-color);
+    position: absolute;
+    bottom: 0;
+}
+
+.section-title .extra {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-text-secondary);
+
+    margin-left: 8px;}
