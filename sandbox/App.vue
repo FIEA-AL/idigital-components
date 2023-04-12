@@ -50,7 +50,7 @@
                 :item-active="5"
                 @clicked-page=""
             />
-<ICTTag>1</ICTTag>
+<ICTag label="teste">1</ICTag>
  <ICSpinner></ICSpinner>
  <ICCard>
   <template #header>
@@ -89,7 +89,7 @@ import ICDivider from "../src/components/ICDivider/ICDivider.vue"
 import ICPagination from "../src/components/ICPagination/ICPagination.vue"
 import ICSpinner from "../src/components/ICSpinner/ICSpinner.vue"
 import ICCard from "../src/components/ICCard/ICCard.vue"
-import ICTTag from "../src/components/ICTTag/ICTTag.vue"
+import ICTag from "../src/components/ICTag/ICTag.vue"
 
 
 export default{
@@ -111,7 +111,7 @@ export default{
     ICPagination,
     ICSpinner,
     ICCard,
-    ICTTag
+    ICTag
     }
     
 }

@@ -16,7 +16,7 @@ import ICDivider from "./components/ICDivider/ICDivider.vue";
 import ICPagination from "./components/ICPagination/ICPagination.vue";
 import ICSpinner from "./components/ICSpinner/ICSpinner.vue";
 import ICCard from "./components/ICCard/ICCard.vue";
-import ICTTag from "./components/ICTTag/ICTTag.vue";
+import ICTag from "./components/ICTag/ICTag.vue";
 
 export {ICButton,ICAddbutton,ICCheckbox,ICInputImage,ICTextarea,ICInput,ICSelect,ICSortFilter,ICDrawerFilter
-,ICCheckboxGroup,ICSectionTitle,ICConfirmDelete,ICDivider,ICPagination,ICSpinner,ICCard,ICTTag};
+,ICCheckboxGroup,ICSectionTitle,ICConfirmDelete,ICDivider,ICPagination,ICSpinner,ICCard,ICTag};
