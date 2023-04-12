@@ -15,8 +15,23 @@ import ICConfirmDelete from "./components/ICConfirmDelete/ICConfirmDelete.vue";
 import ICDivider from "./components/ICDivider/ICDivider.vue";
 import ICPagination from "./components/ICPagination/ICPagination.vue";
 import ICSpinner from "./components/ICSpinner/ICSpinner.vue";
-import ICCard from "./components/ICCard/ICCard.vue";
-import ICTag from "./components/ICTag/ICTag.vue";
+import ICContainer from "./components/ICContainer/ICContainer.vue";
 
-export {ICButton,ICAddbutton,ICCheckbox,ICInputImage,ICTextarea,ICInput,ICSelect,ICSortFilter,ICDrawerFilter
-,ICCheckboxGroup,ICSectionTitle,ICConfirmDelete,ICDivider,ICPagination,ICSpinner,ICCard,ICTag};
+export {
+  ICButton,
+  ICAddbutton,
+  ICCheckbox,
+  ICInputImage,
+  ICTextarea,
+  ICInput,
+  ICSelect,
+  ICSortFilter,
+  ICDrawerFilter,
+  ICCheckboxGroup,
+  ICSectionTitle,
+  ICConfirmDelete,
+  ICDivider,
+  ICPagination,
+  ICSpinner,
+  ICContainer,
+};
