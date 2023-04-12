@@ -38,7 +38,7 @@
 
  <!-- <ICCheckboxGroup title="teste" :with-shortcut="true" :all-selected="true"></ICCheckboxGroup>  -->
 
- <ICSectionTitle title="wake up brigth side situation"></ICSectionTitle>
+ <ICSectionTitle title="teste"></ICSectionTitle>
 
  <!-- <ICConfirmDelete :show=true></ICConfirmDelete> -->
  <ICDivider ></ICDivider>
@@ -50,7 +50,21 @@
                 :item-active="5"
                 @clicked-page=""
             />
- <ICTag  label="ticket.module"  :dark-text="true" status="successLight"></ICTag>
+<ICTTag>1</ICTTag>
+ <ICSpinner></ICSpinner>
+ <ICCard>
+  <template #header>
+    <h4>Minhas tarefas</h4>
+  </template>
+  <div>
+    <p>My Content</p>
+  </div>
+  <template #footer>
+    <h5>Ver todas as tarefas</h5>
+  </template>
+
+
+ </ICCard>
 </div>
 
   </main>
@@ -72,11 +86,10 @@ import ICCheckboxGroup from "../src/components/ICCheckboxGroup/ICCheckboxGroup.v
 import ICSectionTitle from "../src/components/ICSectionTitle/ICSectionTitle.vue"
 import ICConfirmDelete from "../src/components/ICConfirmDelete/ICConfirmDelete.vue"
 import ICDivider from "../src/components/ICDivider/ICDivider.vue"
-import ICTag from "../src/components/ICTag/ICTag.vue"
-import  ICPagination from "../src/components/ICPagination/ICPagination.vue"
-// import  from "../src/components//.vue"
-// import  from "../src/components//.vue"
-// import  from "../src/components//.vue"
+import ICPagination from "../src/components/ICPagination/ICPagination.vue"
+import ICSpinner from "../src/components/ICSpinner/ICSpinner.vue"
+import ICCard from "../src/components/ICCard/ICCard.vue"
+import ICTTag from "../src/components/ICTTag/ICTTag.vue"
 
 
 export default{
@@ -95,7 +108,10 @@ export default{
     ICSectionTitle,
     ICConfirmDelete,
     ICDivider,
-    ICPagination
+    ICPagination,
+    ICSpinner,
+    ICCard,
+    ICTTag
     }
     
 }

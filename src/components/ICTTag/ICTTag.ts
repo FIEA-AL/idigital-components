@@ -1,7 +1,7 @@
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-    name: 'IDCTag',
+    name: 'ICTag',
     props: {
         label: {
             type: String,

@@ -13,8 +13,10 @@ import ICCheckboxGroup from "./components/ICCheckboxGroup/ICCheckboxGroup.vue";
 import ICSectionTitle from "./components/ICSectionTitle/ICSectionTitle.vue";
 import ICConfirmDelete from "./components/ICConfirmDelete/ICConfirmDelete.vue";
 import ICDivider from "./components/ICDivider/ICDivider.vue";
-import ICTag from "./components/ICTag/ICTag.vue";
-import ICPagination from "./components/ICPagination/ICPagination";
+import ICPagination from "./components/ICPagination/ICPagination.vue";
+import ICSpinner from "./components/ICSpinner/ICSpinner.vue";
+import ICCard from "./components/ICCard/ICCard.vue";
+import ICTTag from "./components/ICTTag/ICTTag.vue";
 
 export {ICButton,ICAddbutton,ICCheckbox,ICInputImage,ICTextarea,ICInput,ICSelect,ICSortFilter,ICDrawerFilter
-,ICCheckboxGroup,ICSectionTitle,ICConfirmDelete,ICDivider,ICTag,ICPagination};
+,ICCheckboxGroup,ICSectionTitle,ICConfirmDelete,ICDivider,ICPagination,ICSpinner,ICCard,ICTTag};
