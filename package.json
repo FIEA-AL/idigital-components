@@ -37,6 +37,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build && npm run build:types",
+    "base": "xcopy src\\assets\\css\\base.css dist\\",
     "build:types": "vue-tsc --project tsconfig.build-types.json --declaration --emitDeclarationOnly --outDir dist/types ",
     "typecheck": "vue-tsc --project tsconfig.build-types.json --noEmit"
   },
@@ -45,10 +46,14 @@
     "@types/node": "^18.11.18",
     "@vitejs/plugin-vue": "^4.0.0",
     "@vue/tsconfig": "^0.1.3",
+    "copy": "^0.3.2",
     "sass": "^1.57.1",
     "typescript": "^4.9.4",
     "vite": "^4.0.4",
     "vue": "^3.2.47",
     "vue-tsc": "^1.0.24"
+  },
+  "dependencies": {
+    "@fiea-al/idigital-components": "file:fiea-al-idigital-components-0.1.0.tgz"
   }
 }

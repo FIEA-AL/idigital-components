@@ -16,6 +16,8 @@ import ICDivider from "./components/ICDivider/ICDivider.vue";
 import ICPagination from "./components/ICPagination/ICPagination.vue";
 import ICSpinner from "./components/ICSpinner/ICSpinner.vue";
 import ICContainer from "./components/ICContainer/ICContainer.vue";
+import ICTitleBarLayout from "./components/ICTitleBarLayout/ICTitleBarLayout.vue";
+
 
 export {
   ICButton,
@@ -34,4 +36,5 @@ export {
   ICPagination,
   ICSpinner,
   ICContainer,
+  ICTitleBarLayout  
 };

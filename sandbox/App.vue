@@ -1,6 +1,10 @@
 <template>
-  <main>
+ <main>
     <h1>Ambiente de Testes</h1>
+    <ICTitleBarLayout
+            title="Minha assinatura"
+            subtitle="Crie sua assinatura para utilizar no seu email coorporativo"
+        />
     <!-- <ICButton
                         id="save-form-password"
                         text="Mudar senha"
@@ -14,9 +18,9 @@
     <ICCheckbox label-text="CheckBox"></ICCheckbox>
     <ICInputImage label="InputImage" placeholder="Faça o upload do ícone do serviço"
                         :picture="picture" @change="(value)=>picture = value"></ICInputImage>
-                        <ICInput placeholder="Digite seu nome" id='1'></ICInput> -->
+                        <ICInput placeholder="Digite seu nome" id='1'></ICInput> 
 
-    <!-- <ICTextarea></ICTextarea>
+  <ICTextarea></ICTextarea>
                         <ICSelect
                         id="reference"
                     text="Referência"
@@ -33,16 +37,21 @@
                     <br>
                     <ICAddButton text="teste" link="teste" />
                     <br>
-                        <ICDrawerFilter :is-open=false @change="(value)=>showFilter = value"></ICDrawerFilter> -->
-    <!-- <ICSortFilter name="Mais recente" @clicked="handleSortServices"/> -->
+                        <ICDrawerFilter :is-open=false @change="(value)=>showFilter = value"></ICDrawerFilter> 
+    <ICSortFilter name="Mais recente" @clicked="handleSortServices"/>
 
-    <!-- <ICCheckboxGroup title="teste" :with-shortcut="true" :all-selected="true"></ICCheckboxGroup>  -->
+    <ICCheckboxGroup title="teste" :with-shortcut="true" :all-selected="true"></ICCheckboxGroup> 
 
     <ICSectionTitle title="teste"></ICSectionTitle>
-
-    <!-- <ICConfirmDelete :show=true></ICConfirmDelete> -->
-    <ICDivider></ICDivider>
-    <div class="tags">
+    <ICButton
+                        id="save-form-password"
+                        text="Mudar senha"
+                        :max-width="true"
+                        :submit="true"
+                    />  
+    <ICConfirmDelete :show=true></ICConfirmDelete> 
+    <ICDivider></ICDivider> -->
+    <!-- <div class="tags">
       <ICPagination
         :items-per-page="10"
         :total-items="0"
@@ -62,7 +71,7 @@
           <h5>Ver todas as tarefas</h5>
         </template>
       </ICContainer>
-    </div>
+    </div> -->
   </main>
 </template>
 
@@ -83,6 +92,8 @@ import ICDivider from "../src/components/ICDivider/ICDivider.vue";
 import ICPagination from "../src/components/ICPagination/ICPagination.vue";
 import ICSpinner from "../src/components/ICSpinner/ICSpinner.vue";
 import ICContainer from "../src/components/ICContainer/ICContainer.vue";
+import ICTitleBarLayout from "../src/components/ICTitleBarLayout/ICTitleBarLayout.vue";
+
 
 export default {
   name: "App",
@@ -102,6 +113,7 @@ export default {
     ICDivider,
     ICPagination,
     ICSpinner,
+    ICTitleBarLayout
   },
 };
 </script>

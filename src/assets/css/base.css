@@ -1,0 +1,212 @@
+/* :root {
+  --color-text: #121212;
+  --color-text-accent: #0159C0;
+
+  --color-background: #F5F6F7;
+  --color-scrollbar: #ABABAB;
+}
+
+:root.dark {
+  --color-text: #F8F8F8;
+  --color-text-accent: #FCC530;
+  
+  --color-background: #102232;
+  --color-scrollbar: #142A3D;
+} */
+@import url('//fonts.cdnfonts.com/css/rawline');
+
+:root {
+  --background-color: #F5F6F7;
+  --accent-color: #0159C0;
+  --secondary-color: #e5e5e5;
+  --background-overlay-color: #ffffff;
+  --font-color: #121212;
+  --padding-center: 8vw;
+  --danger-color: #F92B19;
+  --button-text-color: #F8F8F8;
+  --border-color: #A2A2A2;
+  --background-option-theme: #E0E0E0;
+
+  /* GERAL */
+  --color-background: #F5F6F7;
+  --color-scrollbar: #ABABAB;
+  --color-tour-card: #0159C0;
+
+  /* FORMS */
+  --color-input: #121212;
+  --color-input-focus: #0159C0;
+  --color-input-invalid: #F92B19;
+  --color-input-disabled: #A2A2A2;
+  --color-input-placeholder: #A2A2A2;
+
+  --color-input-border: #DFDFDF;
+  --color-input-hover-border: #A2A2A2;
+  --color-input-focus-border: #0159C0;
+  --color-input-invalid-border: #F92B19;
+
+  --color-input-shadow: #12121225;
+  --color-input-disabled-background: #E5E5E5;
+
+  --color-option: #121212;
+  --color-option-hover: #0159C0;
+
+  --color-option-background: #EBEBEB;
+  --color-option-hover-background: #E0E0E0;
+
+  /* BOTÕES */
+  --color-button-solid: #F8F8F8;
+  --color-button-outline: #0159C0;
+  --color-button-transparent: #121212;
+
+  --color-button-solid-shadow: #c0ccde;
+
+  --color-button-solid-background: #0159C0;
+  --color-button-outline-background: transparent;
+  --color-button-transparent-background: transparent;
+
+  --color-button-solid-hover: #F8F8F8;
+  --color-button-outline-hover: #001F72;
+  --color-button-transparent-hover: #0159C0;
+
+  --color-button-solid-hover-background: #0159C0;
+  --color-button-outline-hover-background: transparent;
+  --color-button-transparent-hover-background: #DEEBFF;
+
+  --color-button-solid-click: #F8F8F8;
+  --color-button-outline-click: #F8F8F8;
+  --color-button-transparent-click: #0159C0;
+
+  --color-button-solid-click-background: #01479A;
+  --color-button-outline-click-background: #0159C0;
+  --color-button-transparent-click-background: #C8D4E6;
+
+  --color-button-solid-disabled: #A2A2A2;
+  --color-button-outline-disabled: #DFDFDF;
+  --color-button-transparent-disabled: #DFDFDF;
+
+  --color-button-solid-disabled-background: #E5E5E5;
+  --color-button-outline-disabled-background: transparent;
+  --color-button-transparent-disabled-background: transparent;
+
+  /* ÍCONES PASSO À PASSO */
+  --color-step-icon: #0159C0;
+
+  /* TEXTO */
+  --color-text: #121212;
+  --color-text-accent: #0159C0;
+  --color-text-secondary: #A2A2A2;
+  --color-text-input-image: #A2A2A2;
+}
+
+:root.dark {
+  --background-color: #102232;
+  --accent-color: #FCC530;
+  --secondary-color: #13324D;
+  --font-color: #F8F8F8;
+  --danger-color: #F92B19;
+  --background-overlay-color: #13324D;
+  --button-text-color: #121212;
+  --border-color: #A2A2A2;
+  --background-option-theme: #102232;
+
+  /* GERAL */
+  --color-background: #102232;
+  --color-scrollbar: #142A3D;
+  --color-tour-card: #826415;
+
+  /* FORMS */
+  --color-input: #F8F8F8;
+  --color-input-focus: #FCC530;
+  --color-input-invalid: #F92B19;
+  --color-input-disabled: #666D80;
+  --color-input-placeholder: #666D80;
+
+  --color-input-border: #666D80;
+  --color-input-hover-border: #F8F8F8;
+  --color-input-focus-border: #FCC530;
+  --color-input-invalid-border: #F92B19;
+
+  --color-input-shadow: #12121250;
+  --color-input-disabled-background: #142A3D;
+
+  --color-option: #F8F8F8;
+  --color-option-hover: #FCC530;
+
+  --color-option-background: #142A3D;
+  --color-option-hover-background: #1C3245;
+
+  /* BOTÕES */
+  --color-button-solid: #102232;
+  --color-button-outline: #F8F8F8;
+  --color-button-transparent: #F8F8F8;
+
+  --color-button-solid-shadow: #826415;
+
+  --color-button-solid-background: #FCC530;
+  --color-button-outline-background: transparent;
+  --color-button-transparent-background: transparent;
+
+  --color-button-solid-hover: #102232;
+  --color-button-outline-hover: #CA9E26;
+  --color-button-transparent-hover: #FCC530;
+
+  --color-button-solid-hover-background: #FCC530;
+  --color-button-outline-hover-background: transparent;
+  --color-button-transparent-hover-background: #142A3D;
+
+  --color-button-solid-click: #102232;
+  --color-button-outline-click: #102232;
+  --color-button-transparent-click: #FCC530;
+
+  --color-button-solid-click-background: #CA9E26;
+  --color-button-outline-click-background: #FCC530;
+  --color-button-transparent-click-background: #463508;
+
+  --color-button-solid-disabled: #666D80;
+  --color-button-outline-disabled: #666D80;
+  --color-button-transparent-disabled: #666D80;
+
+  --color-button-solid-disabled-background: #142A3D;
+  --color-button-outline-disabled-background: transparent;
+  --color-button-transparent-disabled-background: transparent;
+
+  /* ÍCONES PASSO À PASSO */
+  --color-step-icon: #FCC530;
+
+  /* TEXTO */
+  --color-text: #F8F8F8;
+  --color-text-accent: #FCC530;
+  --color-text-secondary: #666D80;
+  --color-text-input-image: #FFFFFF;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  box-sizing: border-box;
+  font-weight: normal;
+  font-family: 'Rawline', Inter, Helvetica, sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar {
+  width: 16px;
+  border-radius: 0px 12px 12px 0;
+}
+
+::-webkit-scrollbar-thumb {
+  margin-block: 4em;
+  border-radius: 8px;
+  border: 4px solid transparent;
+  background-clip: content-box;
+  background-color: var(--color-scrollbar);
+}
