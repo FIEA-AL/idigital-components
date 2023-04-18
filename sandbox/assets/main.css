@@ -1,4 +1,6 @@
 @import url('./base.css');
+@import url('http://fonts.cdnfonts.com/css/rawline');
+@import url('./iconsax/style.css');
 
 #app {
   margin: 0 auto;

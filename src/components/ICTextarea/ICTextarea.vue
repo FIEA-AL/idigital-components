@@ -12,7 +12,7 @@
         :placeholder="placeholder"
         :error="error"
         v-bind="$attrs"
-        @input="$emit('update:modelValue', $event.target.value)"
+        @input="(event:any) => $emit('update:modelValue', event.target.value)"
       />
 
       <div class="txtContainer">
@@ -22,13 +22,13 @@
     </label>
   </template>
 
-<script>
+<script lang="ts">
   export default {
     inheritAttrs: false,
   };
 </script>
 
-<script setup>
+<script setup lang="ts">
 import { useAttrs } from "vue";
 const $attrs = useAttrs();
 defineProps({

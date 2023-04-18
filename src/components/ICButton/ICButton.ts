@@ -7,6 +7,7 @@ export default defineComponent({
         text: {
             type: String,
             required: true,
+            default: false,
         },
         submit: {
             type: Boolean,

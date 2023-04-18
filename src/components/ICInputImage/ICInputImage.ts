@@ -21,7 +21,7 @@ export default defineComponent({
     setup(props, { emit }) {
         const pictureUrl = ref(props.picture);
     
-        const handleChangeFile = (event) => {
+        const handleChangeFile = (event: any) => {
           const file = event.target.files[0];
           pictureUrl.value = URL.createObjectURL(file);
           emit('change', pictureUrl.value);

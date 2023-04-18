@@ -15,7 +15,7 @@
           :error="error"
           @focus="showDropdown = true"
           @blur="showDropdown = false"
-          @change="$emit('update:modelValue', $event.target.value)"
+          @change="(event:any) => $emit('update:modelValue', event.target.value)"
         />
         <div class="txtContainer">
           <span class="slcLabel">{{ text }}</span>
@@ -25,24 +25,24 @@
       <div class="slcDropdown" v-if="showDropdown">
         <div
           :key="index"
-          :class="[{ opSelected: op.value === modelValue }, 'slcOption']"
-          @mousedown="$emit('update:modelValue', op.value)"
+          :class="[{ opSelected: op!.value === modelValue }, 'slcOption']"
+          @mousedown="(event:any) => $emit('update:modelValue', op!.value)"
           v-for="(op, index) in options"
         >
-          {{ op.name }}
+          {{ op!.name }}
         </div>
       </div>
     </div>
   </template>
 <style scoped lang="css" src="./ICSelect.css"></style>
 
-  <script>
+  <script lang="ts">
   export default {
     inheritAttrs: false,
   };
   </script>
 
-  <script setup>
+  <script setup lang="ts">
   import { useAttrs, ref } from "vue";
   const showDropdown = ref(false);
   const $attrs = useAttrs();
@@ -56,7 +56,7 @@
     disabled: Boolean,
     readonly: Boolean,
     options: {
-      type: Array,
+      type: Array<any>,
       required: true,
     },
     id: {

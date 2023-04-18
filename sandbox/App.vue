@@ -1,10 +1,8 @@
 <template>
  <main>
-    <h1>Ambiente de Testes</h1>
-    <ICTitleBarLayout
-            title="Minha assinatura"
-            subtitle="Crie sua assinatura para utilizar no seu email coorporativo"
-        />
+  <i class="isax isax-add"></i>
+
+    <ICButton variant="solid" text="Mudar senha" :max-width="false" />  
     <!-- <ICButton
                         id="save-form-password"
                         text="Mudar senha"
@@ -93,7 +91,6 @@ import ICPagination from "../src/components/ICPagination/ICPagination.vue";
 import ICSpinner from "../src/components/ICSpinner/ICSpinner.vue";
 import ICContainer from "../src/components/ICContainer/ICContainer.vue";
 import ICTitleBarLayout from "../src/components/ICTitleBarLayout/ICTitleBarLayout.vue";
-
 
 export default {
   name: "App",
