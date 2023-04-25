@@ -1,7 +1,7 @@
 {
   "name": "@fiea-al/idigital-components",
   "license": "MIT",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Biblioteca de componentes do IDigital",
   "homepage": "https://github.com/FIEA-AL/idigital-components#README.md",
   "main": "dist/idigital-components.umd.js",
@@ -55,7 +55,6 @@
     "vue-tsc": "^1.0.24"
   },
   "dependencies": {
-    "@fiea-al/idigital-components": "file:fiea-al-idigital-components-0.1.0.tgz",
     "iconsax": "^0.0.1"
   }
 }

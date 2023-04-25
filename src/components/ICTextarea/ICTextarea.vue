@@ -12,7 +12,7 @@
         :placeholder="placeholder"
         :error="error"
         v-bind="$attrs"
-        @input="(event:any) => $emit('update:modelValue', event.target.value)"
+        @input="(event:any) => $emit('keyup', event)"
       />
 
       <div class="txtContainer">

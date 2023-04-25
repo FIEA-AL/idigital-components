@@ -5,4 +5,10 @@
 #app {
   margin: 0 auto;
   max-width: 1280px;
+  background-color: var(--color-background);
 }
+/* .pao{
+
+  background-color: green;
+  height: 300px;
+} */

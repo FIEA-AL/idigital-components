@@ -1,6 +1,7 @@
 .section-title{
     display: flex;
     align-items: center;
+    color:var(--color-text);
 }
 .section-title .title{
     position: relative;

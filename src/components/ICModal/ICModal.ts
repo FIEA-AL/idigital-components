@@ -1,7 +1,7 @@
-import { defineComponent } from 'vue';
+import { defineComponent,ref } from 'vue';
 
 export default defineComponent({
-    name: "DropdownService",
+    name: "ICModal",
     emits: [ 'close', 'delete'],
     props: {
         show: {
@@ -24,11 +24,30 @@ export default defineComponent({
             type: String,
             default: "/"
         },
+        value: {
+            type: Boolean,
+            default: false
+        }
+  
       
     },
-    methods: {
-        close(){
-            this.$emit('close');
-        },
-    }
+    // setup(props, { emit }) {
+    //     // const button = ref()
+    //     const show = ref(props.show);
+    //     const close = () => {
+    //        show.value = false
+    //     };
+        
+        
+    //   return {
+    //     show,
+    //     close,
+    //   }
+    // methods: {
+    //     close(){
+    //         this.$emit('close');
+    //     },
+    // }
+
+    
 });

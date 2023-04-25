@@ -1,20 +1,15 @@
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-    name: "ICAddButton",
+    name: 'TitleBarLayout',
     props: {
-        text: {
-            type: String,
-            required: true
-        },
-        link: {
+        title: {
             type: String,
             required: true,
         },
-        openExternally: {
-            type: Boolean,
-            default: false
-        }
+        subtitle: {
+            type: String,
+            required: true,
+        },
     },
-   
 });

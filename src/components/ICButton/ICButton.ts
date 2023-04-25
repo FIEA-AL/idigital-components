@@ -1,4 +1,4 @@
-import { defineComponent } from 'vue';
+import { defineComponent,onMounted, onUnmounted } from 'vue';
 
 export default defineComponent({
     name: 'ICButton',
@@ -28,6 +28,10 @@ export default defineComponent({
         disabled: {
             type: Boolean,
             default: false,
+        },
+        icon:{
+            type:String
         }
-    }
+    },
+    expose: ['variant','removeMargin']
 });
