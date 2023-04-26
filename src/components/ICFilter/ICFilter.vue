@@ -1,6 +1,5 @@
 <template>
-    <div class="sort-filter" @click="clicked">
-        <!-- <i class="isax isax-arrow-3"></i> -->
+    <div class="sort-filter" >
         <i v-if="icon" :class="[icon, 'isax']"></i>
         <h4>{{text}}</h4>
     </div>

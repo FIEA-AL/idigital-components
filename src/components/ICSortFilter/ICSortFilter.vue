@@ -1,5 +1,5 @@
 <template>
-    <div class="sort-filter" @click="clicked">
+    <div class="sort-filter" >
         <i class="isax isax-arrow-3"></i>
         <h4>{{name}}</h4>
     </div>

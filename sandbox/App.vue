@@ -16,13 +16,7 @@
                     error="Precisa ser um contato válido: 3103 ou 82912345678"
                     @keyup="digite"
                     />
-                    <ICPagination 
-        :items-per-page="10"
-        :total-items="0"
-        :total-pages="20"
-        :item-active="5"
-        @clicked-page="page"
-      />
+            
 
       <ICLink href="sdsd">Orquestra</ICLink>
       <ICSpinner ></ICSpinner>
@@ -152,53 +146,37 @@
       </ICContainer>
     </div> -->
 
-    <ICContainer>
-        <template #header>
-          <h4>Minhas tarefas</h4>
-        </template>
-        <div>
-          <p>My Content</p>
-        </div>
-        <template #footer>
-          <h5>Ver todas as tarefas</h5>
-        </template>
-      </ICContainer>
+    
+    <!-- 
+    <ICSortFilter></ICSortFilter>
+    <ICCheckboxGroup></ICCheckboxGroup>
+    <ICInputImage></ICInputImage> -->
+    <!-- <ICCheckboxGroup title="Selecione o seu time favorito">
+      <ICCheckbox labelText="teste"></ICCheckbox>
+      <ICCheckbox labelText="teste"></ICCheckbox>
+      <ICCheckbox labelText="teste"></ICCheckbox>
+      <ICCheckbox labelText="teste"></ICCheckbox>
+    </ICCheckboxGroup> -->
 
-
-    <ICModal :show="showPopup">
-        <template #header>
-          <h4>Minhas tarefas</h4>
-        </template>
-        <div>
-          <p>My Content</p>
-        </div>
-        <template #footer>
-          <ICButton text="close" @click="fecharpoup"></ICButton>
-        </template>
-      </ICModal> 
-
-      <ICDrawerFilter :is-open="true" :mask="true">
-        <template #header>
-          <h4>Minhas tarefas</h4>
-        </template>
-        <div>
-          <p>My Content</p>
-        </div>
-        <template #footer>
-          <h5>Ver todas as tarefas</h5>
-        </template>
-      </ICDrawerFilter>
-      <ICButton variant="solid" :max-width="false" :remove-margin="false" icon="isax-add" ref="button" text="me clique 1" @click="onclick" ></ICButton>  
       <ICSelect
-                    id="reference"
-                    text="Referência"
-                    error="Casa referência não pode ser vazia"
-                    info="Verifique com seu gestor antes do preenchimento"
-                    :options="[{name:'IEL',value:'IEL'},{name: 'FIEA', value: 'FIEA' },{ name: 'SESI', value: 'SESI' },{ name: 'SENAI', value: 'SENAI' },{ name: 'SESI SENAI', value: 'SESI SENAI' },{ name: '4', value: 'SISTEMA FIEA' }]"
-                    ></ICSelect>
+        id="reference"
+        text="Referência"
+        error="Casa referência não pode ser vazia"
+        info="Verifique com seu gestor antes do preenchimento"
+        @bet="mudar"
+        :options="[{name:'IEL',value:'1'},{name: 'FIEA', value: '2' },{ name: 'SESI', value: '3' },{ name: 'SENAI', value: '4' },{ name: 'SESI SENAI', value: '5' }]"
+        ></ICSelect>
 
-                    <ICCheckboxGroup title="teste"></ICCheckboxGroup>
+        
+        <ICPagination 
+        :items-per-page="10"
+        :total-items="0"
+        :total-pages="20"
+        :item-active="5"
+        @clicked-page="page"
+      />
 
+                 
   </main>
 </template>
 
@@ -265,8 +243,9 @@ export default {
     const digite = (event) => {
       console.log(event.target.value)
     };
-    const page = (clickedPage) => {
-      console.log(clickedPage)
+    const page = (pao) => {
+      console.log(pao)
+
     }
     const pegarvalor = (event) => {
       console.log(event.target.value)
@@ -275,6 +254,10 @@ export default {
       showPopup.value=false
       console.log(showPopup.value)
 
+    }
+    const mudar = (valor) => {
+      alert('F')
+      console.log(valor)
     }
 
     
@@ -286,7 +269,8 @@ export default {
     // button,
     pegarvalor,
     showPopup,
-    fecharpoup
+    fecharpoup,
+    mudar
     };
   }
 };

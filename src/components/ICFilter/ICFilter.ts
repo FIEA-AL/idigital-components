@@ -12,9 +12,5 @@ export default defineComponent({
             type:String
         }
     },
-    methods: {
-        clicked(): void{
-            this.$emit('clicked');
-        }
-    }
+
 });

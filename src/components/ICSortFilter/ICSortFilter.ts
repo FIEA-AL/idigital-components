@@ -9,9 +9,5 @@ export default defineComponent({
             required: true,
         },
     },
-    methods: {
-        clicked(): void{
-            this.$emit('clicked');
-        }
-    }
+ 
 });
