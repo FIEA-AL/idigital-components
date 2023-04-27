@@ -1,6 +1,6 @@
 <template>
  <main>
-   <!-- <i class="isax isax-add"></i> -->
+   <i class="isax isax-add"></i>
 
    <!-- <ICInputImage label="InputImage" placeholder="Faça o upload do ícone do serviço" :picture="" @change="(value)=> value"></ICInputImage> -->
 
@@ -175,8 +175,8 @@
         :total-pages="20"
         :item-active="5"
         @clicked-page="page"
-      /> -->
-      <ICInputImage :picture="url" label="INPUT IMAGE" @change="foreveryoung"></ICInputImage>
+      />
+
                  
   </main>
 </template>
@@ -200,9 +200,10 @@ import ICContainer from "../src/components/ICContainer/ICContainer.vue";
 import ICTitleBar from "../src/components/ICTitleBar/ICTitleBar.vue";
 import ICFilter from "../src/components/ICFilter/ICFilter.vue"
 import ICLink from "../src/components/ICLink/ICLink.vue"
+import ICAvatar from "../src/components/ICAvatar/ICAvatar.vue"
 
 // import { defineComponent } from 'vue';
-import { ref,onMounted,watch } from 'vue';
+import { ref,onMounted, watch } from 'vue';
 
 export default {
   name: "App",
@@ -224,12 +225,12 @@ export default {
     ICTitleBar,
     ICFilter,
     ICLink,
-    ICContainer
+    ICContainer,
+    ICAvatar
   },
   setup() {
     // const button = ref()
     const showPopup = ref(false);
-    const url = ref()
     
     onMounted(() => {
       // console.log(popup.value.component)
@@ -278,10 +279,7 @@ export default {
     pegarvalor,
     showPopup,
     fecharpoup,
-    mudar,
-    cliqueaqui,
-    foreveryoung,
-    url
+    mudar
     };
   }
 };

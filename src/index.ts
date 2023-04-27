@@ -18,6 +18,8 @@ import ICContainer from "./components/ICContainer/ICContainer.vue";
 import ICTitleBar from "./components/ICTitleBar/ICTitleBar.vue";
 import ICFilter from "./components/ICFilter/ICFilter.vue";
 import ICLink from "./components/ICLink/ICLink.vue";
+import ICAvatar from "./components/ICAvatar/ICAvatar.vue";
+
 
 
 
@@ -39,5 +41,6 @@ export {
   ICContainer,
   ICTitleBar,
   ICFilter,
-  ICLink
+  ICLink,
+  ICAvatar
 };
