@@ -1,0 +1,107 @@
+.large{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+
+    position: absolute;
+    width: 112px;
+    height: 112px;
+    left: 20px;
+    top: 20px;
+    border-radius: 100px;
+
+}
+.regular{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+
+    position: absolute;
+    width: 72px;
+    height: 72px;
+    left: 20px;
+    top: 158px;
+    border-radius: 100px;
+
+}
+.small{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 20px;
+    top: 256px;
+    border-radius: 100px;
+
+}
+.smaller{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 20px;
+    top: 256px;
+    border-radius: 100px;
+
+}
+
+.icon-large{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    
+    position: absolute;
+    width: 112px;
+    height: 112px;
+    left: 177px;
+    top: 20px;
+    
+    background: #E5E5E5;
+    border-radius: 100px
+}
+.icon-regular{
+    display: block; /* torna a tag <i> um elemento de bloco */
+    width: 72px;
+    height: 72px;
+    border-radius: 100%; /* define o border-radius como 50% para fazer um círculo */
+    background-color: #ccc; /* apenas para demonstração */
+    text-align: center; /* centraliza o ícone horizontalmente */
+    line-height: 72px; 
+    font-size: 50px;
+
+}
+.icon-small{
+    display: block; /* torna a tag <i> um elemento de bloco */
+    width: 40px;
+    height: 40px;
+    border-radius: 100%; /* define o border-radius como 50% para fazer um círculo */
+    background-color: #ccc; /* apenas para demonstração */
+    text-align: center; /* centraliza o ícone horizontalmente */
+    line-height:40px; 
+    font-size: 20px;
+
+}
+.icon-smaller{
+    display: block; /* torna a tag <i> um elemento de bloco */
+    width: 40px;
+    height: 40px;
+    border-radius: 100%; /* define o border-radius como 50% para fazer um círculo */
+    background-color: #ccc; /* apenas para demonstração */
+    text-align: center; /* centraliza o ícone horizontalmente */
+    line-height:40px; 
+    font-size: 20px;
+
+
+}
