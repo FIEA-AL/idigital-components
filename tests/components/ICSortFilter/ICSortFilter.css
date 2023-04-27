@@ -1,0 +1,18 @@
+.sort-filter{
+    display: flex;
+    align-items: center;
+    color: var(--accent-color);
+
+    cursor: pointer;
+}
+.sort-filter:hover{
+    opacity: 0.6;
+}
+.sort-filter > i {
+    font-size: 20px;
+    margin-right: 8px;
+}
+.sort-filter > h4{
+    font-size: 16px;
+    font-weight: 600;
+ }

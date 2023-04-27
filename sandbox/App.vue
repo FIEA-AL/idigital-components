@@ -1,6 +1,6 @@
 <template>
  <main>
-   <i class="isax isax-add"></i>
+   <!-- <i class="isax isax-add"></i> -->
 
    <!-- <ICInputImage label="InputImage" placeholder="Faça o upload do ícone do serviço" :picture="" @change="(value)=> value"></ICInputImage> -->
 
@@ -157,25 +157,26 @@
       <ICCheckbox labelText="teste"></ICCheckbox>
       <ICCheckbox labelText="teste"></ICCheckbox>
     </ICCheckboxGroup> -->
-
+<!-- 
       <ICSelect
         id="reference"
         text="Referência"
         error="Casa referência não pode ser vazia"
         info="Verifique com seu gestor antes do preenchimento"
         @bet="mudar"
+        @click="cliqueaqui"
         :options="[{name:'IEL',value:'1'},{name: 'FIEA', value: '2' },{ name: 'SESI', value: '3' },{ name: 'SENAI', value: '4' },{ name: 'SESI SENAI', value: '5' }]"
-        ></ICSelect>
+        ></ICSelect> -->
 
         
-        <ICPagination 
+        <!-- <ICPagination 
         :items-per-page="10"
         :total-items="0"
         :total-pages="20"
         :item-active="5"
         @clicked-page="page"
-      />
-
+      /> -->
+      <ICInputImage :picture="url" label="INPUT IMAGE" @change="foreveryoung"></ICInputImage>
                  
   </main>
 </template>
@@ -228,6 +229,7 @@ export default {
   setup() {
     // const button = ref()
     const showPopup = ref(false);
+    const url = ref()
     
     onMounted(() => {
       // console.log(popup.value.component)
@@ -255,9 +257,15 @@ export default {
       console.log(showPopup.value)
 
     }
-    const mudar = (valor) => {
-      alert('F')
+    const mudar = (valor: any) => {
       console.log(valor)
+    }
+    const cliqueaqui = (event:any) =>{
+      alert(event.target.value)
+    }
+    const foreveryoung = (valor:any,) =>{
+      url.value = valor 
+      
     }
 
     
@@ -270,7 +278,10 @@ export default {
     pegarvalor,
     showPopup,
     fecharpoup,
-    mudar
+    mudar,
+    cliqueaqui,
+    foreveryoung,
+    url
     };
   }
 };
