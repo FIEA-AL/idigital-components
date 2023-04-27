@@ -1,7 +1,6 @@
 import { defineComponent } from 'vue';
 export default defineComponent({
     name: "ICAvatar",
-    // emits: [ 'clickedPage'],
     props: {
         picture: {
             type: String,

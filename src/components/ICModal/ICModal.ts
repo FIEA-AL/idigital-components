@@ -31,23 +31,7 @@ export default defineComponent({
   
       
     },
-    // setup(props, { emit }) {
-    //     // const button = ref()
-    //     const show = ref(props.show);
-    //     const close = () => {
-    //        show.value = false
-    //     };
-        
-        
-    //   return {
-    //     show,
-    //     close,
-    //   }
-    // methods: {
-    //     close(){
-    //         this.$emit('close');
-    //     },
-    // }
+    
 
     
 });

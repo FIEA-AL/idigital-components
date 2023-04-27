@@ -13,4 +13,3 @@
 <script lang="ts" src="./ICPagination.ts"></script>
 <style scoped lang="css" src="./ICPagination.css"></style>
 
-<!-- @click="()=>this.$emit('clickedPage', index)"> -->

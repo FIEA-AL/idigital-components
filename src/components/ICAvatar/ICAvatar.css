@@ -56,12 +56,12 @@
 }
 
 .icon-large{
-    display: block; /* torna a tag <i> um elemento de bloco */
+    display: block; 
     width: 112px;
     height: 112px;
-    border-radius: 100%; /* define o border-radius como 50% para fazer um círculo */
-    background-color: #ccc; /* apenas para demonstração */
-    text-align: center; /* centraliza o ícone horizontalmente */
+    border-radius: 100%; 
+    background-color: #ccc; 
+    text-align: center; 
     line-height: 112px; 
     font-size: 75px;
 
@@ -74,12 +74,12 @@
     bottom: 9.13%;
 }
 .icon-regular{
-    display: block; /* torna a tag <i> um elemento de bloco */
+    display: block; 
     width: 72px;
     height: 72px;
-    border-radius: 100%; /* define o border-radius como 50% para fazer um círculo */
-    background-color: #ccc; /* apenas para demonstração */
-    text-align: center; /* centraliza o ícone horizontalmente */
+    border-radius: 100%; 
+    background-color: #ccc; 
+    text-align: center; 
     line-height: 72px; 
     font-size: 50px;
 
@@ -93,12 +93,12 @@
 
 }
 .icon-small{
-    display: block; /* torna a tag <i> um elemento de bloco */
+    display: block; 
     width: 40px;
     height: 40px;
-    border-radius: 100%; /* define o border-radius como 50% para fazer um círculo */
-    background-color: #ccc; /* apenas para demonstração */
-    text-align: center; /* centraliza o ícone horizontalmente */
+    border-radius: 100%; 
+    background-color: #ccc; 
+    text-align: center; 
     line-height:40px; 
     font-size: 20px;
 
@@ -112,12 +112,12 @@
 
 }
 .icon-smaller{
-    display: block; /* torna a tag <i> um elemento de bloco */
+    display: block; 
     width: 32px;
     height: 32px;
-    border-radius: 100%; /* define o border-radius como 50% para fazer um círculo */
-    background-color: #ccc; /* apenas para demonstração */
-    text-align: center; /* centraliza o ícone horizontalmente */
+    border-radius: 100%; 
+    background-color: #ccc; 
+    text-align: center; 
     line-height:32px; 
     font-size: 18px;
 

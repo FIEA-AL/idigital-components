@@ -12,5 +12,4 @@
 
 <script lang="ts" src="./ICButton.ts"></script>
 <style scoped lang="css" src="./ICButton.css"></style>
-<!-- @click="emitClickEvent -->
 
