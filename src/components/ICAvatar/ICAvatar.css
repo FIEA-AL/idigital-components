@@ -56,20 +56,22 @@
 }
 
 .icon-large{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0px;
-    
-    position: absolute;
+    display: block; /* torna a tag <i> um elemento de bloco */
     width: 112px;
     height: 112px;
-    left: 177px;
-    top: 20px;
-    
+    border-radius: 100%; /* define o border-radius como 50% para fazer um círculo */
+    background-color: #ccc; /* apenas para demonstração */
+    text-align: center; /* centraliza o ícone horizontalmente */
+    line-height: 112px; 
+    font-size: 75px;
+
     background: #E5E5E5;
-    border-radius: 100px
+    border-radius: 100px;
+    position: absolute;
+    left: 22.27%;
+    right: 20.9%;
+    top: 8.33%;
+    bottom: 9.13%;
 }
 .icon-regular{
     display: block; /* torna a tag <i> um elemento de bloco */
@@ -80,6 +82,14 @@
     text-align: center; /* centraliza o ícone horizontalmente */
     line-height: 72px; 
     font-size: 50px;
+
+    background: #E5E5E5;
+    border-radius: 100px;
+    position: absolute;
+    left: 22.27%;
+    right: 20.9%;
+    top: 8.33%;
+    bottom: 9.13%;
 
 }
 .icon-small{
@@ -92,16 +102,31 @@
     line-height:40px; 
     font-size: 20px;
 
+    background: #E5E5E5;
+    border-radius: 100px;
+    position: absolute;
+    left: 22.27%;
+    right: 20.9%;
+    top: 8.33%;
+    bottom: 9.13%;
+
 }
 .icon-smaller{
     display: block; /* torna a tag <i> um elemento de bloco */
-    width: 40px;
-    height: 40px;
+    width: 32px;
+    height: 32px;
     border-radius: 100%; /* define o border-radius como 50% para fazer um círculo */
     background-color: #ccc; /* apenas para demonstração */
     text-align: center; /* centraliza o ícone horizontalmente */
-    line-height:40px; 
-    font-size: 20px;
+    line-height:32px; 
+    font-size: 18px;
 
+    background: #E5E5E5;
+    border-radius: 100px;
+    position: absolute;
+    left: 22.27%;
+    right: 20.9%;
+    top: 8.33%;
+    bottom: 9.13%;
 
 }

@@ -7,7 +7,6 @@
 }
 .title-bar > .information{
     flex: 1;
-
     display: flex;
     align-items: center;
 }
@@ -26,56 +25,13 @@
 .title-bar > .information > .details > h1.have-parent{
     font-size: 24px;
 }
-.title-bar > .information > .details > h4 {
-    font-size: 16px;
-    font-weight: normal;
-    color: var(--font-color);
-}
-.title-bar > .link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
-    color: var(--font-color);
-    text-decoration: none;
-}
-.title-bar > .link > i{
-    margin-right: 8px;
-    font-size: 16px;
-}
-.title-bar > .link > h5{
-    font-weight: 600;
-    font-size: 16px;
-}
-.title-bar > .actions {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-}
+
+
+
 .information > a{
     text-decoration: none;
     color: var(--font-color);
-}
-.arrow-back{
-    width: 40px;
-    height: 40px;
-
-    background-color: var(--secondary-color);
-    border-radius: 50%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    cursor: pointer;
-
-    margin-right: 24px;
-}
-.arrow-back > i {
-    font-size: 24px;
-}
-.arrow-back:hover{
-    opacity: 0.6;
 }
 
 @media only screen and (max-width: 850px) {

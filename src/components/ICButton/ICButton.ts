@@ -7,7 +7,7 @@ export default defineComponent({
         text: {
             type: String,
             required: true,
-            default: false,
+            default: 'button',
         },
         submit: {
             type: Boolean,
@@ -33,5 +33,4 @@ export default defineComponent({
             type:String
         }
     },
-    expose: ['variant','removeMargin']
 });
