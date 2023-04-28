@@ -5,7 +5,11 @@ import Vue from '@vitejs/plugin-vue'
 export default defineConfig({
   // Se os nossos arquivos .vue tiverem a tag 'style', serão compilados como um único arquivo .css em /dist.
   plugins: [Vue({ style: { filename: 'style.css' } })],
+  test: {
 
+    globals: true,
+    environment: "jsdom",
+  },
   build: {
     // Arquivos compilados para /dist.
     outDir: './dist',

@@ -1,7 +1,6 @@
 // Arquivo de exportação dos componentes;
 
 import ICButton from "./components/ICButton/ICButton.vue";
-import ICAddbutton from "./components/ICAddbutton/ICAddButton.vue";
 import ICCheckbox from "./components/ICCheckbox/ICCheckbox.vue";
 import ICInputImage from "./components/ICInputImage/ICInputImage.vue";
 import ICTextarea from "./components/ICTextarea/ICTextarea.vue";
@@ -11,15 +10,21 @@ import ICSortFilter from "./components/ICSortFilter/ICSortFilter.vue";
 import ICDrawerFilter from "./components/ICDrawerFilter/ICDrawerFilter.vue";
 import ICCheckboxGroup from "./components/ICCheckboxGroup/ICCheckboxGroup.vue";
 import ICSectionTitle from "./components/ICSectionTitle/ICSectionTitle.vue";
-import ICConfirmDelete from "./components/ICConfirmDelete/ICConfirmDelete.vue";
+import ICModal from "./components/ICModal/ICModal.vue";
 import ICDivider from "./components/ICDivider/ICDivider.vue";
 import ICPagination from "./components/ICPagination/ICPagination.vue";
 import ICSpinner from "./components/ICSpinner/ICSpinner.vue";
 import ICContainer from "./components/ICContainer/ICContainer.vue";
+import ICTitleBar from "./components/ICTitleBar/ICTitleBar.vue";
+import ICFilter from "./components/ICFilter/ICFilter.vue";
+import ICLink from "./components/ICLink/ICLink.vue";
+import ICAvatar from "./components/ICAvatar/ICAvatar.vue";
+
+
+
 
 export {
   ICButton,
-  ICAddbutton,
   ICCheckbox,
   ICInputImage,
   ICTextarea,
@@ -29,9 +34,13 @@ export {
   ICDrawerFilter,
   ICCheckboxGroup,
   ICSectionTitle,
-  ICConfirmDelete,
+  ICModal,
   ICDivider,
   ICPagination,
   ICSpinner,
   ICContainer,
+  ICTitleBar,
+  ICFilter,
+  ICLink,
+  ICAvatar
 };

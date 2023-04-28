@@ -1,6 +1,14 @@
 @import url('./base.css');
+@import url('http://fonts.cdnfonts.com/css/rawline');
+@import url('./iconsax/style.css');
 
 #app {
   margin: 0 auto;
   max-width: 1280px;
+  background-color: var(--color-background);
 }
+/* .pao{
+
+  background-color: green;
+  height: 300px;
+} */

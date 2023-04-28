@@ -8,13 +8,17 @@ button {
 
     font-size: 16px;
     font-weight: 500;
-
-    margin-top: 24px;
+    
+    gap: 8px;
     padding: 8px 16px;
     border-radius: 12px;
     border: 2px solid transparent;
 
     transition: all 0.3s ease-out 0.1s;
+}
+button > i{
+    font-size: 20px;
+
 }
 button.max-width{
     width: 100%;

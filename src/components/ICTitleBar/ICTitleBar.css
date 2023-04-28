@@ -1,0 +1,49 @@
+.title-bar{
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.title-bar > .information{
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+.title-bar > .information > .parent-router{
+    font-weight: 600;
+    font-size: 32px;
+    color: var(--color-text-secondary);
+
+    margin-right: 24px;
+}
+.title-bar > .information > .details > h1 {
+    font-weight: 600;
+    font-size: 32px;
+    color: var(--font-color);
+}
+.title-bar > .information > .details > h1.have-parent{
+    font-size: 24px;
+}
+
+
+
+
+.information > a{
+    text-decoration: none;
+    color: var(--font-color);
+}
+
+@media only screen and (max-width: 850px) {
+    .title-bar > .information > .details > h1 {
+        font-size: 24px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .title-bar {
+        align-items: start;
+        flex-direction: column;
+        gap: 16px;
+    }
+}

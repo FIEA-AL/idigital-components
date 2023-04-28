@@ -13,7 +13,8 @@
   --color-background: #102232;
   --color-scrollbar: #142A3D;
 } */
-@import url('//fonts.cdnfonts.com/css/rawline');
+/* @import url('http://fonts.cdnfonts.com/css/rawline'); */
+
 
 :root {
   --background-color: #F5F6F7;
@@ -96,6 +97,10 @@
   --color-text-accent: #0159C0;
   --color-text-secondary: #A2A2A2;
   --color-text-input-image: #A2A2A2;
+
+
+  /* MODAL */
+  --color-modal-background:#DFDFDF;
 }
 
 :root.dark {
@@ -178,17 +183,25 @@
   --color-text-accent: #FCC530;
   --color-text-secondary: #666D80;
   --color-text-input-image: #FFFFFF;
+
+   /* MODAL */
+   --color-modal-background:#142A3D;
 }
-*,
-*::before,
-*::after {
+* {
+
   margin: 0;
+  
   padding: 0;
-  position: relative;
+  
+   position: relative;
+  
   box-sizing: border-box;
-  font-weight: normal;
-  font-family: 'Rawline', Inter, Helvetica, sans-serif;
-}
+  
+font-weight: normal;
+  
+ font-family: 'Rawline', Inter, Helvetica, sans-serif;
+  
+  }
 
 body {
   width: 100%;

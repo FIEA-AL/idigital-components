@@ -11,7 +11,7 @@
                 <p>PNG, JPEG ou WEBP. (5MB)</p>
             </div>
         </div>
-        <input ref="input" type="file" name="file" class="file" accept="image/png, image/jpeg, image/webp" @change="handleChangeFile" />
+        <input ref="input" type="file" name="file" class="file" accept="image/png, image/jpeg, image/webp" @change="handleChangeFile($event)" />
     </div>
 </template>
 
