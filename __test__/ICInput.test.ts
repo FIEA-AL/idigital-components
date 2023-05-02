@@ -38,17 +38,6 @@ describe('ICInput', () => {
     expect(wrapper.emitted()).toContain(MouseEvent);
   });
 
-  test('should be able to disable input', () => {
-    const wrapper = mount(ICInput, {
-      props: {
-        id: 'test-input',
-        disabled: true
-      }
-    });
-
-    console.log(wrapper.get('input'))
-  });
-
   test('should be able to render all properties', () => {
     const wrapper = mount(ICInput, {
       props: {
