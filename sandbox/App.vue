@@ -1,9 +1,12 @@
 <template>
- <main>
-   <ICButton text="teste" :disabled="false"></ICButton> <!-- OK -->
-   <ICDivider></ICDivider>  <!-- OK -->
-   <ICContainer>  <!-- OK -->
-          <!-- <template #header>
+  <main>
+    <ICButton text="teste" :disabled="false"></ICButton>
+    <!-- OK -->
+    <ICDivider></ICDivider>
+    <!-- OK -->
+    <ICContainer>
+      <!-- OK -->
+      <!-- <template #header>
             <h1 style="color: var(--color-text-secondary)">Assinatura</h1>
           </template>
           <div >
@@ -18,36 +21,61 @@
           </template> -->
     </ICContainer>
 
-    <ICDrawerFilter :is-open="true" ></ICDrawerFilter> <!-- OK -->  <!-- :is-open="true" :mask="true" -->
-    <ICInput text="Teste"></ICInput>  <!-- OK -->
-    <ICInputImage label="InputImage" placeholder="Faça o upload do ícone do serviço" :picture="picture" @change="mudarfoto"></ICInputImage>  <!-- OK -->
-    <ICLink></ICLink> <!-- OK -->
-    <ICModal :show="showPopup">  <!-- OK -->
-        <template #header>
-          <h4>Minhas tarefas</h4>
-        </template>
-        <div>
-          <p>My Content</p>
-        </div>
-        <template #footer>
-          <ICButton text="close" @click="fecharpoup"></ICButton>
-        </template>
-      </ICModal><br>
-      
-      <ICPagination  :items-per-page="10" :total-items="0" :total-pages="20" :item-active="5" @clicked-page="page"/>  <!-- OK -->
-      <ICSpinner></ICSpinner> <!-- OK -->
-      <ICSectionTitle title="teste" extra="extra"></ICSectionTitle>
-      <ICSortFilter name="sortear"></ICSortFilter>
-      <ICTextarea text="TESTE"></ICTextarea>
-      <ICTitleBar title="TITLE BAR" subtitle="SUBTITULO"></ICTitleBar>
-      
-<br>
-<br>
-<br>
-<br>
-<br>
+    <ICDrawerFilter :is-open="true"></ICDrawerFilter>
+    <!-- OK -->
+    <!-- :is-open="true" :mask="true" -->
+    <ICInput text="Teste"></ICInput>
+    <!-- OK -->
+    <ICInputImage
+      label="InputImage"
+      placeholder="Faça o upload do ícone do serviço"
+      :picture="picture"
+      @change="mudarfoto"
+    ></ICInputImage>
+    <!-- OK -->
+    <ICLink></ICLink>
+    <!-- OK -->
+    <ICModal :show="showPopup">
+      <!-- OK -->
+      <template #header>
+        <h4>Minhas tarefas</h4>
+      </template>
+      <div>
+        <p>My Content</p>
+      </div>
+      <template #footer>
+        <ICButton text="close" @click="fecharpoup"></ICButton>
+      </template> </ICModal
+    ><br />
 
-</main>
+    <ICPagination
+      :items-per-page="10"
+      :total-items="0"
+      :total-pages="20"
+      :item-active="5"
+      @clicked-page="page"
+    />
+    <!-- OK -->
+    <ICSpinner></ICSpinner>
+    <!-- OK -->
+    <ICSectionTitle title="teste" extra="extra"></ICSectionTitle>
+    <ICSortFilter name="sortear"></ICSortFilter>
+    <ICTextarea text="TESTE"></ICTextarea>
+    <ICTitleBar title="TITLE BAR" subtitle="SUBTITULO"></ICTitleBar>
+
+    <ICSelect
+      id="reference"
+      text="Referência"
+      error="Casa referência não pode ser vazia"
+      info="Verifique com seu gestor antes do preenchimento"
+      :options="[{name: 'oi', value: 39}, {name: 'oi', value: 39}]"
+    ></ICSelect>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+  </main>
 </template>
 
 <script lang="ts">
@@ -67,11 +95,11 @@ import ICPagination from "../src/components/ICPagination/ICPagination.vue";
 import ICSpinner from "../src/components/ICSpinner/ICSpinner.vue";
 import ICContainer from "../src/components/ICContainer/ICContainer.vue";
 import ICTitleBar from "../src/components/ICTitleBar/ICTitleBar.vue";
-import ICLink from "../src/components/ICLink/ICLink.vue"
-import ICAvatar from "../src/components/ICAvatar/ICAvatar.vue"
+import ICLink from "../src/components/ICLink/ICLink.vue";
+import ICAvatar from "../src/components/ICAvatar/ICAvatar.vue";
 
 // import { defineComponent } from 'vue';
-import { ref,onMounted } from 'vue';
+import { ref, onMounted } from "vue";
 
 export default {
   name: "App",
@@ -93,66 +121,60 @@ export default {
     ICTitleBar,
     ICLink,
     ICContainer,
-    ICAvatar
+    ICAvatar,
   },
   setup() {
     // const button = ref()
     const showPopup = ref(true);
-    const picture = ref(false)
+    const picture = ref(false);
     onMounted(() => {
       // console.log(popup.value.component)
-    })
+    });
     const onclick = () => {
-      showPopup.value=true
-      console.log(showPopup.value)
-
+      showPopup.value = true;
+      console.log(showPopup.value);
     };
     const onclick2 = () => {
-      alert('Button clicked! 2');
-    }
+      alert("Button clicked! 2");
+    };
     const digite = (event) => {
-      console.log(event.target.value)
+      console.log(event.target.value);
     };
     const page = (pao) => {
-      console.log(pao)
-
-    }
+      console.log(pao);
+    };
     const pegarvalor = (event) => {
-      console.log(event.target.value)
-    }
-    const fecharpoup = () =>{
-      showPopup.value=false
-      console.log(showPopup.value)
-
-    }
+      console.log(event.target.value);
+    };
+    const fecharpoup = () => {
+      showPopup.value = false;
+      console.log(showPopup.value);
+    };
     const mudar = (valor: any) => {
-      console.log(valor)
-    }
+      console.log(valor);
+    };
     // const cliqueaqui = (event:any) =>{
     //   alert(event.target.value)
     // }
-    const mudarfoto = (valor:any,) =>{
-      picture.value = valor
-      
-    }
-
-    
-  return {
-    onclick,
-    onclick2,
-    digite,
-    page,
-    // button,
-    pegarvalor,
-    showPopup,
-    fecharpoup,
-    mudar,
-    mudarfoto,
-    picture
+    const mudarfoto = (valor: any) => {
+      picture.value = valor;
     };
-  }
-};
 
+    return {
+      onclick,
+      onclick2,
+      digite,
+      page,
+      // button,
+      pegarvalor,
+      showPopup,
+      fecharpoup,
+      mudar,
+      mudarfoto,
+      picture,
+    };
+  },
+};
 </script>
 
 <style scoped lang="scss"></style>
