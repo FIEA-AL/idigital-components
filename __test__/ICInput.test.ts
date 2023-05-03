@@ -12,6 +12,8 @@ describe('ICInput', () => {
       }
     });
 
+    if (!wrapper.vm.id) throw new Error('propotype id is required');
+
     expect(wrapper.get('input')).toBeTruthy();
   });
 
@@ -23,6 +25,8 @@ describe('ICInput', () => {
       }
     });
 
+    if (!wrapper.vm.id) throw new Error('propotype id is required');
+
     expect(wrapper.text()).toEqual('test label');
   });
 
@@ -32,6 +36,8 @@ describe('ICInput', () => {
         id: 'test-input',
       }
     });
+
+    if (!wrapper.vm.id) throw new Error('propotype id is required');
 
     await wrapper.get('input').trigger('click');
 
@@ -53,6 +59,7 @@ describe('ICInput', () => {
       }
     });
 
+    if (!wrapper.vm.id) throw new Error('propotype id is required');
 
     expect(wrapper.vm.modelValue).toBeNull();
     expect(wrapper.vm.text).toEqual('test label');

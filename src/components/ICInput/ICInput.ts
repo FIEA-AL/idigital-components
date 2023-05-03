@@ -19,7 +19,11 @@ export default defineComponent({
     id: {
       type: String,
       required: true,
-    },
+    }
   },
-  inheritAttrs: false,
+  data() {
+    return {
+      inheritAttrs: false
+    }
+  }
 });
