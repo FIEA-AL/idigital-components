@@ -11,6 +11,8 @@ describe('ICCheckboxGroup', () => {
       }
     });
 
+    if (!wrapper.props().title) throw new Error('propotype title is required');
+
     expect(wrapper.get('span')).toBeTruthy();
     expect(wrapper.text()).toContain('Test title');
   });
@@ -21,6 +23,8 @@ describe('ICCheckboxGroup', () => {
         title: 'Test title',
       }
     });
+
+    if (!wrapper.props().title) throw new Error('propotype title is required');
 
     expect(wrapper.vm.allSelected).toBeFalsy();
     expect(wrapper.vm.title).toEqual('Test title');
@@ -36,6 +40,8 @@ describe('ICCheckboxGroup', () => {
       }
     });
 
+    if (!wrapper.props().title) throw new Error('propotype title is required');
+
     expect(wrapper.vm.allSelected).toBeTruthy();
     expect(wrapper.vm.title).toEqual('Test title');
 
@@ -48,6 +54,8 @@ describe('ICCheckboxGroup', () => {
         title: 'Test title'
       }
     });
+
+    if (!wrapper.props().title) throw new Error('propotype title is required');
 
     await wrapper.get('span').trigger('click');
 
