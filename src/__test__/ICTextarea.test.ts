@@ -1,7 +1,7 @@
 import { beforeEach, describe, expect, test } from "vitest";
 import { mount } from '@vue/test-utils';
 
-import ICTextarea from '../src/components/ICTextarea/ICTextarea.vue';
+import ICTextarea from '../components/ICTextarea/ICTextarea.vue';
 
 let wrapper = mount([]);
 
@@ -20,7 +20,7 @@ beforeEach(() => {
     }
   });
 
-  if (!wrapper.vm.id) throw new Error('propotype id is required');
+  if (!wrapper.props().id) throw new Error('propotype id is required');
 });
 
 describe('ICCheckboxGroup', () => {

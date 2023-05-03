@@ -2,7 +2,7 @@ import '@testing-library/jest-dom';
 import { beforeEach, describe, expect, test } from "vitest";
 import { mount } from '@vue/test-utils';
 
-import ICInputimagem from '../src/components/ICInputImage/ICInputImage.vue';
+import ICInputimagem from '../components/ICInputImage/ICInputImage.vue';
 
 let wrapper = mount([]);
 

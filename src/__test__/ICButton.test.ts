@@ -2,7 +2,7 @@ import '@testing-library/jest-dom';
 import { mount } from '@vue/test-utils';
 import { test, describe, expect, beforeEach } from 'vitest';
 
-import ICButton from '../src/components/ICButton/ICButton.vue';
+import ICButton from '../components/ICButton/ICButton.vue';
 
 let wrapper = mount([]);
 
@@ -66,5 +66,5 @@ describe('ICButton', () => {
     await wrapper.setProps({ icon: 'icon-element' });
 
     expect(wrapper.find('i')).toBeTruthy();
-  }); 
+  });
 });

@@ -22,13 +22,6 @@
     </label>
   </template>
 
-    <div class="txtContainer">
-      <span class="inpLabel">{{ text }}</span>
-      <span class="inpInfo" v-if="info">{{ info }}</span>
-    </div>
-  </label>
-</template>
-
 <style scoped lang="css" src="./ICInput.css"></style>
 
 <script lang="ts">

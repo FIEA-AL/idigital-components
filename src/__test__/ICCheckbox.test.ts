@@ -2,7 +2,7 @@ import '@testing-library/jest-dom';
 import { expect, describe, test, beforeEach } from 'vitest';
 import { mount } from "@vue/test-utils";
 
-import ICCheckbox from '../src/components/ICCheckbox/ICCheckbox.vue';
+import ICCheckbox from '../components/ICCheckbox/ICCheckbox.vue';
 
 let wrapper = mount([]);
 

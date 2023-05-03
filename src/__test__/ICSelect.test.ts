@@ -2,7 +2,7 @@ import '@testing-library/jest-dom';
 import { beforeEach, describe, expect, test } from "vitest";
 import { mount } from '@vue/test-utils';
 
-import ICSelect from '../src/components/ICSelect/ICSelect.vue';
+import ICSelect from '../components/ICSelect/ICSelect.vue';
 
 let wrapper = mount([]);
 

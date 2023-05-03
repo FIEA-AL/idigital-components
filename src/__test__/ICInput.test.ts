@@ -2,7 +2,7 @@ import '@testing-library/jest-dom';
 import { expect, describe, test, beforeEach } from 'vitest';
 import { mount } from "@vue/test-utils";
 
-import ICInput from '../src/components/ICInput/ICInput.vue';
+import ICInput from '../components/ICInput/ICInput.vue';
 
 let wrapper = mount([]);
 
