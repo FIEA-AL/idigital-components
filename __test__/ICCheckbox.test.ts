@@ -13,6 +13,8 @@ describe('ICCheckbox', () => {
       }
     })
 
+    if (!wrapper.props().labelText) throw new Error('propotype labelText is required');
+
     expect(wrapper.text()).toContain('Test label text');
 
     expect(wrapper.get('input')).toBeTruthy();
@@ -26,6 +28,8 @@ describe('ICCheckbox', () => {
       }
     });
 
+    if (!wrapper.props().labelText) throw new Error('propotype labelText is required');
+
     expect(wrapper.vm.checked).toBeTruthy();
 
     const wrapper2 = mount(ICCheckbox, {
@@ -33,6 +37,8 @@ describe('ICCheckbox', () => {
         labelText: 'Test label text',
       }
     });
+
+    if (!wrapper.props().labelText) throw new Error('propotype labelText is required');
 
     expect(wrapper2.vm.checked).toBeFalsy();
   });
