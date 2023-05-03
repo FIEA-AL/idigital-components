@@ -12,7 +12,7 @@
         :placeholder="placeholder"
         :error="error"
         v-bind="$attrs"
-        @input="(event:any) => $emit('keyup', event)"
+        v-model="value"
       />
 
       <div class="txtContainer">
@@ -32,9 +32,10 @@ export default {
 </script>
 
 <script setup lang="ts">
-import { useAttrs } from "vue";
+import {computed, useAttrs} from "vue";
 const $attrs = useAttrs();
-defineProps({
+
+const props = defineProps({
   modelValue: null,
   text: String,
   info: String,
@@ -52,4 +53,11 @@ defineProps({
     required: true,
   },
 });
+
+const emit = defineEmits(['update:modelValue'])
+
+const value = computed({
+  get: () => props.modelValue,
+  set: (value) => emit('update:modelValue', value)
+})
 </script>
