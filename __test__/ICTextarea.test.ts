@@ -1,37 +1,45 @@
-import { describe, expect, test } from "vitest";
+import { beforeEach, describe, expect, test } from "vitest";
 import { mount } from '@vue/test-utils';
 
 import ICTextarea from '../src/components/ICTextarea/ICTextarea.vue';
 
+let wrapper = mount([]);
+
+beforeEach(() => {
+  wrapper = mount(ICTextarea, {
+    props: {
+      id: 'test id',
+      text: 'test text',
+      info: 'test info',
+      error: 'test error',
+      placeholder: 'test placeholder',
+      invalid: false,
+      disabled: true,
+      readonly: false,
+      type: 'test type'
+    }
+  });
+
+  if (!wrapper.vm.id) throw new Error('propotype id is required');
+});
+
 describe('ICCheckboxGroup', () => {
   test('should be able to render', () => {
-    const wrapper = mount(ICTextarea, {
-      props: {
-        id: 'test id',
-      }
-    });
-
-    if (!wrapper.vm.id) throw new Error('propotype id is required');
-
     expect(wrapper.html()).toBeTruthy();
   });
 
-  test('should be able to render all properties', () => {
-    const wrapper = mount(ICTextarea, {
-      props: {
-        id: 'test id',
-        text: 'test text',
-        info: 'test info',
-        error: 'test error',
-        placeholder: 'test placeholder',
-        invalid: false,
-        disabled: true,
-        readonly: false,
-        type: 'test type'
-      }
+  test('should be able to render all properties', async () => {
+    await wrapper.setProps({
+      id: 'test id',
+      text: 'test text',
+      info: 'test info',
+      error: 'test error',
+      placeholder: 'test placeholder',
+      invalid: false,
+      disabled: true,
+      readonly: false,
+      type: 'test type'
     });
-
-    if (!wrapper.vm.id) throw new Error('propotype id is required');
 
     expect(wrapper.props().id).toEqual('test id');
     expect(wrapper.props().type).toEqual('test type');
@@ -45,16 +53,8 @@ describe('ICCheckboxGroup', () => {
   });
 
   test('should be able to click event input', async () => {
-    const wrapper = mount(ICTextarea, {
-      props: {
-        id: 'test id',
-      }
-    });
-
-    if (!wrapper.vm.id) throw new Error('propotype id is required');
-
     await wrapper.find('textarea').trigger('click');
 
-    expect(wrapper.emitted()).toHaveProperty('click');
+    expect(wrapper.emitted()).toContain(MouseEvent);
   });
 });

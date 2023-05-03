@@ -1,75 +1,63 @@
 import '@testing-library/jest-dom';
-import { expect, describe, test } from 'vitest';
+import { expect, describe, test, beforeEach } from 'vitest';
 import { mount } from "@vue/test-utils";
 
 import ICInput from '../src/components/ICInput/ICInput.vue';
 
-describe('ICInput', () => {
-  test('should be able to render', () => {
-    const wrapper = mount(ICInput, {
-      props: {
-        id: 'test-input',
-      }
-    });
+let wrapper = mount([]);
 
-    if (!wrapper.vm.id) throw new Error('propotype id is required');
-
-    expect(wrapper.get('input')).toBeTruthy();
+beforeEach(() => {
+  wrapper = mount(ICInput, {
+    props: {
+      id: 'test-input',
+    }
   });
 
-  test('should be able to render label for input', () => {
-    const wrapper = mount(ICInput, {
-      props: {
-        id: 'test-input',
-        text: 'test label'
-      }
-    });
+  if (!wrapper.props().id) throw new Error('propotype id is required');
+});
 
-    if (!wrapper.vm.id) throw new Error('propotype id is required');
+describe('ICInput', () => {
+  test('should be able to render', () => {
+    expect(wrapper.get('input')).toBeTruthy();
+    expect(wrapper.html()).toBeTruthy();
+  });
+
+  test('should be able to render label for input', async () => {
+    await wrapper.setProps({ text: 'test label' });
 
     expect(wrapper.text()).toEqual('test label');
   });
 
   test('should be able to clink event in input', async () => {
-    const wrapper = mount(ICInput, {
-      props: {
-        id: 'test-input',
-      }
-    });
-
-    if (!wrapper.vm.id) throw new Error('propotype id is required');
-
     await wrapper.get('input').trigger('click');
 
     expect(wrapper.emitted()).toContain(MouseEvent);
   });
 
-  test('should be able to render all properties', () => {
-    const wrapper = mount(ICInput, {
-      props: {
-        id: 'test-input',
-        text: 'test label',
-        modelValue: null,
-        info: 'test info',
-        error: 'test error',
-        placeholder: 'test placeholder',
-        invalid: true,
-        disabled: false,
-        readonly: true,
-      }
+  test('should be able to render all properties', async () => {
+    await wrapper.setProps({
+      id: 'test-input',
+      text: 'test label',
+      modelValue: null,
+      info: 'test info',
+      error: 'test error',
+      placeholder: 'test placeholder',
+      invalid: true,
+      disabled: false,
+      readonly: true,
     });
 
-    if (!wrapper.vm.id) throw new Error('propotype id is required');
+    if (!wrapper.props().id) throw new Error('propotype id is required');
 
-    expect(wrapper.vm.modelValue).toBeNull();
-    expect(wrapper.vm.text).toEqual('test label');
-    expect(wrapper.vm.info).toContain('test info');
-    expect(wrapper.vm.error).toEqual('test error');
-    expect(wrapper.vm.placeholder).toEqual('test placeholder');
-    expect(wrapper.vm.invalid).toBeTruthy()
-    expect(wrapper.vm.disabled).toBeFalsy();
-    expect(wrapper.vm.readonly).toBeTruthy();
-    expect(wrapper.vm.type).toEqual('text');
-    expect(wrapper.vm.id).toEqual('test-input');
+    expect(wrapper.props().modelValue).toBeNull();
+    expect(wrapper.props().text).toEqual('test label');
+    expect(wrapper.props().info).toContain('test info');
+    expect(wrapper.props().error).toEqual('test error');
+    expect(wrapper.props().placeholder).toEqual('test placeholder');
+    expect(wrapper.props().invalid).toBeTruthy()
+    expect(wrapper.props().disabled).toBeFalsy();
+    expect(wrapper.props().readonly).toBeTruthy();
+    expect(wrapper.props().type).toEqual('text');
+    expect(wrapper.props().id).toEqual('test-input');
   });
 });
