@@ -11,6 +11,8 @@ describe('ICCheckboxGroup', () => {
       }
     });
 
+    if (!wrapper.props().label) throw new Error('propotype label is required');
+
     expect(wrapper.get('label')).toBeTruthy();
     expect(wrapper.text()).toContain('Test label');
   });
@@ -21,6 +23,8 @@ describe('ICCheckboxGroup', () => {
         label: 'Test label'
       }
     });
+
+    if (!wrapper.props().label) throw new Error('propotype label is required');
 
     await wrapper.get('input').trigger('click');
 
@@ -34,6 +38,8 @@ describe('ICCheckboxGroup', () => {
       }
     });
 
+    if (!wrapper.props().label) throw new Error('propotype label is required');
+
     await wrapper.get('div').trigger('click');
 
     expect(wrapper.emitted()).toContain(MouseEvent);
@@ -46,6 +52,8 @@ describe('ICCheckboxGroup', () => {
         placeholder: 'Test placeholder'
       }
     });
+
+    if (!wrapper.props().label) throw new Error('propotype label is required');
 
     expect(wrapper.text()).toContain('Test placeholder');
   });
