@@ -13,13 +13,15 @@ describe('ICButton', () => {
       }
     });
 
-    // console.log(wrapper.vm)
+    if (!wrapper.props().text) throw new Error('propotype text is required');
 
     expect(wrapper.text()).toContain('Olá, mundo!');
   });
 
   test('Should be able to render classe default', () => {
-    const wrapper = mount(ICButton, { props: { text: '' }});
+    const wrapper = mount(ICButton, { props: { text: 'test text' }});
+
+    if (!wrapper.props().text) throw new Error('propotype text is required');
 
     expect(wrapper.classes()).toContain('solid');
   });
@@ -27,26 +29,34 @@ describe('ICButton', () => {
   test('Should be able to render attribute disabled', () => {
     const wrapper = mount(ICButton, {
       props: {
-        text: '',
+        text: 'test text',
         disabled:true
       }
     });
+
+    if (!wrapper.props().text) throw new Error('propotype text is required');
 
     expect(wrapper.attributes('disabled')).toBeDefined();
   });
 
   test('Should be able to toggle type', () => {
-    const wrapper1 = mount(ICButton, { props: { text: '' }});
+    const wrapper1 = mount(ICButton, { props: { text: 'test text' }});
+
+    if (!wrapper1.props().text) throw new Error('propotype text is required');
 
     expect(wrapper1.attributes('type')).toEqual('button');
 
-    const wrapper2 = mount(ICButton, { props: { text: '', submit: true } });
+    const wrapper2 = mount(ICButton, { props: { text: 'test text', submit: true } });
+
+    if (!wrapper2.props().text) throw new Error('propotype text is required');
 
     expect(wrapper2.attributes('type')).toEqual('submit');
   });
 
   test('Should be able to the click event', async () => {
-    const wrapper = mount(ICButton, {props: { text: '' }});
+    const wrapper = mount(ICButton, {props: { text: 'test text' }});
+
+    if (!wrapper.props().text) throw new Error('propotype text is required');
 
     await wrapper.find('button').trigger('click');
 
@@ -61,6 +71,8 @@ describe('ICButton', () => {
       }
     });
 
+    if (!wrapper.props().text) throw new Error('propotype text is required');
+
     expect(wrapper.classes()[0]).toContain('max-width');
     expect(wrapper.classes()[1]).toContain('solid');
   });
@@ -72,6 +84,8 @@ describe('ICButton', () => {
         removeMargin: true
       }
     });
+
+    if (!wrapper.props().text) throw new Error('propotype text is required');
 
     expect(wrapper.classes()[0]).toContain('remove-margin');
     expect(wrapper.classes()[1]).toContain('solid');
