@@ -17,15 +17,18 @@
             <h1 style="text-align: center">Copiar</h1>
           </template> -->
     </ICContainer>
-
-
-      <ICSelect
+   
+   <span >
+{{  teste}}
+   </span>
+    <ICSelect
                     id="reference"
                     text="Referência"
                     error="Casa referência não pode ser vazia"
                     info="Verifique com seu gestor antes do preenchimento"
                     :options="[{name:'IEL',value:1},{name: 'FIEA', value: 'FIEA' },{ name: 'SESI', value: 'SESI' },{ name: 'SENAI', value: 'SENAI' },{ name: 'SESI SENAI', value: 'SESI SENAI' },{ name: '4', value: 'SISTEMA FIEA' }]"
-                    v-model="teste"
+                    v-model="teste.mago"
+
                     ></ICSelect>
 <br>
 <br>
@@ -83,7 +86,7 @@ export default {
   },
   setup() {
     // const button = ref()
-    const teste = ref(null)
+    const teste = ref({mago:''})
     const showPopup = ref(true);
     const picture = ref(false)
     onMounted(() => {
@@ -136,8 +139,13 @@ export default {
     mudar,
     mudarfoto,
     picture,
-    teste
+    teste,
     };
+  },
+  watch :{
+    'teste.mago': (valuenew) => {
+      console.log(valuenew)
+    }
   }
 };
 

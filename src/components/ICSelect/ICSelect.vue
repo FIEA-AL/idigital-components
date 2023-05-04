@@ -8,7 +8,7 @@
         v-bind="$attrs"
         :id="id"
         :name="id"
-        :value="teste"
+        :value="modelValue.name"
         :invalid="invalid"
         :disabled="disabled"
         :placeholder="placeholder"
@@ -16,6 +16,7 @@
         @focus="showDropdown = true"
         @blur="showDropdown = false"
         @change="$emit('update:modelValue', $event.target.value)"
+
       />
       <div class="txtContainer">
         <span class="slcLabel">{{ text }}</span>
@@ -28,7 +29,6 @@
         :class="[{ opSelected: op.value === modelValue }, 'slcOption']"
         @mousedown="() => {
           $emit('update:modelValue',{'name':op.name,'value':op.value, })
-          teste = op.name
           }"
         v-for="(op, index) in options"
       >
@@ -66,7 +66,6 @@ defineProps({
     required: true,
   },
 });
-const teste = ref('')
 
 </script>
 
