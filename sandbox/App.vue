@@ -18,29 +18,15 @@
           </template> -->
     </ICContainer>
 
-    <ICDrawerFilter :is-open="true" ></ICDrawerFilter> <!-- OK -->  <!-- :is-open="true" :mask="true" -->
-    <ICInput text="Teste"></ICInput>  <!-- OK -->
-    <ICInputImage label="InputImage" placeholder="Faça o upload do ícone do serviço" :picture="picture" @change="mudarfoto"></ICInputImage>  <!-- OK -->
-    <ICLink></ICLink> <!-- OK -->
-    <ICModal :show="showPopup">  <!-- OK -->
-        <template #header>
-          <h4>Minhas tarefas</h4>
-        </template>
-        <div>
-          <p>My Content</p>
-        </div>
-        <template #footer>
-          <ICButton text="close" @click="fecharpoup"></ICButton>
-        </template>
-      </ICModal><br>
-      
-      <ICPagination  :items-per-page="10" :total-items="0" :total-pages="20" :item-active="5" @clicked-page="page"/>  <!-- OK -->
-      <ICSpinner></ICSpinner> <!-- OK -->
-      <ICSectionTitle title="teste" extra="extra"></ICSectionTitle>
-      <ICSortFilter name="sortear"></ICSortFilter>
-      <ICTextarea text="TESTE"></ICTextarea>
-      <ICTitleBar title="TITLE BAR" subtitle="SUBTITULO"></ICTitleBar>
-      
+
+      <ICSelect
+                    id="reference"
+                    text="Referência"
+                    error="Casa referência não pode ser vazia"
+                    info="Verifique com seu gestor antes do preenchimento"
+                    :options="[{name:'IEL',value:1},{name: 'FIEA', value: 'FIEA' },{ name: 'SESI', value: 'SESI' },{ name: 'SENAI', value: 'SENAI' },{ name: 'SESI SENAI', value: 'SESI SENAI' },{ name: '4', value: 'SISTEMA FIEA' }]"
+                    v-model="teste"
+                    ></ICSelect>
 <br>
 <br>
 <br>
@@ -97,6 +83,7 @@ export default {
   },
   setup() {
     // const button = ref()
+    const teste = ref(null)
     const showPopup = ref(true);
     const picture = ref(false)
     onMounted(() => {
@@ -148,7 +135,8 @@ export default {
     fecharpoup,
     mudar,
     mudarfoto,
-    picture
+    picture,
+    teste
     };
   }
 };

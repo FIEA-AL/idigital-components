@@ -8,14 +8,14 @@
         v-bind="$attrs"
         :id="id"
         :name="id"
-        :value="modelValue"
+        :value="teste"
         :invalid="invalid"
         :disabled="disabled"
         :placeholder="placeholder"
         :error="error"
         @focus="showDropdown = true"
         @blur="showDropdown = false"
-        @change="() => $emit('bet', modelValue)"
+        @change="$emit('update:modelValue', $event.target.value)"
       />
       <div class="txtContainer">
         <span class="slcLabel">{{ text }}</span>
@@ -25,29 +25,31 @@
     <div class="slcDropdown" v-if="showDropdown">
       <div
         :key="index"
-        :class="[{ opSelected: op!.value === modelValue }, 'slcOption']"
-        @mousedown="() => handleMouseDown(op!.value)"
+        :class="[{ opSelected: op.value === modelValue }, 'slcOption']"
+        @mousedown="() => {
+          $emit('update:modelValue',{'name':op.name,'value':op.value, })
+          teste = op.name
+          }"
         v-for="(op, index) in options"
       >
-        {{ op!.name }}
+        {{ op.name }}
       </div>
     </div>
   </div>
 </template>
-<style scoped lang="css" src="./ICSelect.css"></style>
 
-<script lang="ts">
+<script>
 export default {
   inheritAttrs: false,
 };
 </script>
 
-<script setup lang="ts">
+<script setup>
 import { useAttrs, ref } from "vue";
-
-const emits = defineEmits(['bet']);
-
-const props =defineProps({
+const showDropdown = ref(false);
+const $attrs = useAttrs();
+defineProps({
+  modelValue: null,
   text: String,
   info: String,
   error: String,
@@ -56,24 +58,17 @@ const props =defineProps({
   disabled: Boolean,
   readonly: Boolean,
   options: {
-    type: Array<any>,
+    type: Array,
     required: true,
   },
   id: {
     type: String,
     required: true,
   },
-  
-},
-);
-const showDropdown = ref(false);
-const $attrs = useAttrs();
-const modelValue = ref()
-
-function handleMouseDown(valor:string) {
-  modelValue.value=valor
-  emits('bet', valor);
-}
+});
+const teste = ref('')
 
 </script>
+
+<style scoped lang="css" src="./ICSelect.css"></style>
 
