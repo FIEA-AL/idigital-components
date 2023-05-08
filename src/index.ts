@@ -5,7 +5,6 @@ import ICCheckbox from "./components/ICCheckbox/ICCheckbox.vue";
 import ICInputImage from "./components/ICInputImage/ICInputImage.vue";
 import ICTextarea from "./components/ICTextarea/ICTextarea.vue";
 import ICInput from "./components/ICInput/ICInput.vue";
-import ICSelect from "./components/ICSelect/ICSelect.vue";
 import ICSortFilter from "./components/ICSortFilter/ICSortFilter.vue";
 import ICDrawerFilter from "./components/ICDrawerFilter/ICDrawerFilter.vue";
 import ICCheckboxGroup from "./components/ICCheckboxGroup/ICCheckboxGroup.vue";
@@ -16,7 +15,7 @@ import ICPagination from "./components/ICPagination/ICPagination.vue";
 import ICSpinner from "./components/ICSpinner/ICSpinner.vue";
 import ICContainer from "./components/ICContainer/ICContainer.vue";
 import ICTitleBar from "./components/ICTitleBar/ICTitleBar.vue";
-import ICFilter from "./components/ICFilter/ICFilter.vue";
+import ICSelect from "./components/ICSelect/ICSelect.vue";
 import ICLink from "./components/ICLink/ICLink.vue";
 import ICAvatar from "./components/ICAvatar/ICAvatar.vue";
 
@@ -40,7 +39,6 @@ export {
   ICSpinner,
   ICContainer,
   ICTitleBar,
-  ICFilter,
   ICLink,
   ICAvatar
 };

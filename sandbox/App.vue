@@ -30,6 +30,18 @@
                     v-model="teste.mago"
 
                     ></ICSelect>
+
+                    <ICModal :show="showPopup">  <!-- OK -->
+        <template #header>
+          <h4>Minhas tarefas</h4>
+        </template>
+        <div>
+          <p>My Content</p>
+        </div>
+        <template #footer>
+          <ICButton text="close" @click="fecharpoup"></ICButton>
+        </template>
+      </ICModal><br>
 <br>
 <br>
 <br>

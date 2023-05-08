@@ -8,7 +8,7 @@
         v-bind="$attrs"
         :id="id"
         :name="id"
-        :value="modelValue.name"
+        :value="modelValue?.name"
         :invalid="invalid"
         :disabled="disabled"
         :placeholder="placeholder"
@@ -38,13 +38,14 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 export default {
   inheritAttrs: false,
 };
 </script>
 
-<script setup>
+<script setup lang="ts">
+
 import { useAttrs, ref } from "vue";
 const showDropdown = ref(false);
 const $attrs = useAttrs();
