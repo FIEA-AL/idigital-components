@@ -8,28 +8,6 @@ export default defineComponent({
             type: Boolean,
             default: false
         },
-        title: {
-            type: String,
-            default: "Exclusão"
-        },
-        description: {
-            type: String,
-            default: "Essa ação não é reversível"
-        },
-        buttonText: {
-            type: String,
-            default: "Excluir"
-        },
-        redirectTo: {
-            type: String,
-            default: "/"
-        },
-        value: {
-            type: Boolean,
-            default: false
-        }
-  
-      
     },
     
 
