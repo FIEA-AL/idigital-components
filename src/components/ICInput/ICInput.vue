@@ -22,7 +22,6 @@
     </label>
   </template>
 
-
 <style scoped lang="css" src="./ICInput.css"></style>
 
 <script lang="ts">

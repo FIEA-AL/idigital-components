@@ -1,3 +1,17 @@
-/node_modules
-/dist
-/sandbox
+node_modules
+sandbox
+dist
+dist-ssr
+*.local
+coverage
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
