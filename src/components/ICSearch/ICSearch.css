@@ -1,0 +1,172 @@
+.input-container {
+    position: relative;
+  }
+
+  .input-container input {
+    padding-right: 20; 
+    padding-left: 40px; /* Espaço adicional para o caractere vertical */
+
+  } 
+
+  .isax-search-normal {
+    position: absolute;
+    left: 1.5%;
+    right: 0.5%; 
+    top: 36.33%;    
+    /*bottom: 100.33%; */
+    width: 1%;
+    height: 20px;
+    width: 20px;
+    color: var(--color-input-placeholder);
+  }
+  .isax-search-normal:hover{
+    color:var(--accent-color);
+
+  }
+  .isax-search-normal.focado{
+    color:var(--accent-color);
+  }
+  
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 9999;
+    position: absolute;
+    overflow-y: scroll;
+    width: 100%;
+    max-height: 152px;
+    margin-top: 8px;
+    border-radius: 12px;
+    filter: drop-shadow(0px 4px 4px var(--color-input-shadow));
+    background-color: var(--color-option-background);
+
+  }
+  
+  li {
+    padding: 5px;
+    cursor: pointer;
+    width: 100%;
+      padding: 10px 12px;
+      cursor: pointer;
+      color: var(--color-option); 
+   }
+  
+  li.selected {
+    background-color: var(--color-option-hover-background);
+    color:var(--accent-color);
+  }
+  li:hover,.sax-search-normal {
+    background-color:var(--color-option-hover-background);
+    color:var(--accent-color);
+  }
+  .inpContainer * {
+      transition: all 0.3s ease-out 0.1s;
+    }
+  
+    .inpContainer {
+      display: flex;
+      position: relative;
+      flex-flow: column-reverse nowrap;
+  
+      gap: 8px;
+      width: 100%;
+    }
+  
+    .txtContainer {
+      display: flex;
+      flex-flow: column;
+    }
+  
+    .inpInfo {
+      font-size: 12px;
+      font-weight: 300;
+    }
+  
+    .inpLabel {
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--color-input);
+    }
+  
+    .inpError {
+      font-size: 12px;
+      font-weight: 400;
+  
+      text-align: right;
+      color: var(--color-input-invalid);
+    }
+  
+    input {
+      outline: none;
+      appearance: none;
+  
+      width: 100%;
+      padding: 12px;
+  
+      border-style: solid;
+      border-width: 2px;
+      border-radius: 12px;
+      border-color: var(--color-input-border);
+  
+      font-size: 16px;
+      font-weight: 500;
+  
+      color: var(--color-input);
+      background-color: var(--color-background);
+    }
+  
+    input::placeholder {
+      font-size: 14px;
+      color: var(--color-input-placeholder);
+    }
+  
+    input:hover {
+      filter: drop-shadow(0px 4px 4px var(--color-input-shadow));
+      border-color: var(--color-input-hover-border);
+    }
+  
+    input:focus {
+      border-color: var(--color-input-focus-border);
+    }
+    input:focus + .txtContainer > .inpLabel {
+      color: var(--color-input-focus);
+    }
+  
+    input[invalid="true"] {
+      border-color: var(--color-input-invalid-border);
+    }
+    input[invalid="true"] + .txtContainer > .inpLabel {
+      color: var(--color-input-invalid);
+    }
+  
+    input:disabled,
+    input:read-only {
+      color: var(--color-input-disabled);
+      border-color: transparent;
+      background-color: var(--color-input-disabled-background);
+    }
+  
+    input:disabled + .txtContainer > .inpLabel,
+    input:read-only + .txtContainer > .inpLabel {
+      color: var(--color-input-disabled);
+    }
+
+    @media only screen and (max-width: 767px) {
+        .input-container input {
+            padding-right: 20; 
+            padding-left: 40px; /* Espaço adicional para o caractere vertical */
+
+            } 
+            .isax-search-normal {
+                position: absolute;
+                left: 4.5%;
+                right: 0.5%; 
+                top: 36.33%;    
+                /*bottom: 100.33%; */
+                width: 1%;
+                height: 20px;
+                width: 20px;
+            }
+        }
