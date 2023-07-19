@@ -170,9 +170,7 @@
    /* MODAL */
    --color-modal-background:#142A3D;
 }
-*,
-*::before,
-*::after {
+* {
   margin: 0;
   padding: 0;
   position: relative;
